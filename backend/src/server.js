@@ -21,12 +21,13 @@ const server = express()
 const port = process.env.PORT || 3000
 
 server.use(express.static(__dirname))
-server.use(express.static('frontend/build'))
-
+server.use(express.static(path.join(__dirname, 'frontend/build')))
 
 
 server.get('/', (req, res) => {
-  res.sendFile('frontend/build', 'index.html')
+  console.log(__dirname)
+
+  res.sendFile(path.join(__dirname, 'frontend/build', 'index.html'))
   // const teste = path.join(__dirname, "frontend/build") 
 })
 
