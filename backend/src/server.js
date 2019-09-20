@@ -20,14 +20,14 @@ db.once('open', () => {
 const server = express()
 const port = process.env.PORT || 3000
 
-const teste = server.use(express.static(path.join(__dirname, "../../frontend/build")));
+server.use(express.static(__dirname))
+server.use(express.static(path.join(__dirname, 'build')))
 
 
 
 server.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, "../../frontend/build", "index.html"))
+  res.sendFile(path.join(__dirname, 'build', 'index.html'))
   // const teste = path.join(__dirname, "frontend/build") 
-  console.log(teste)
 })
 
 // server.get('/email', EmailController.store)
