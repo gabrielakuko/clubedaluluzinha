@@ -1,5 +1,8 @@
 const express = require('express')
 const mongoose = require('mongoose')
+const path = require("path")
+const EmailController = require('./controllers/EmailController')
+
 
 mongoose.set('useNewUrlParser', true)
 mongoose.set('useFindAndModify', false)
@@ -17,9 +20,17 @@ db.once('open', () => {
 const server = express()
 const port = process.env.PORT || 3000
 
+const teste = server.use(express.static(path.join(__dirname, "../../frontend/build")));
+
+
+
 server.get('/', (req, res) => {
-  res.send('Hello World Umbler')
+  res.sendFile(path.join(__dirname, "../../frontend/build", "index.html"))
+  // const teste = path.join(__dirname, "frontend/build") 
+  console.log(teste)
 })
+
+// server.get('/email', EmailController.store)
 
 server.listen(port, () => {
   console.log('servidor rodando');
