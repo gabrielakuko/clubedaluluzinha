@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "react-burger-menu": "^2.6.11",
+    "react-items-carousel": "^2.6.1",
+    "react-responsive-carousel": "^3.1.50"
+  }
+}
