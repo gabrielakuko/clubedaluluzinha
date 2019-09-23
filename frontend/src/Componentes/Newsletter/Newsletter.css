@@ -1,0 +1,54 @@
+.newsletter {
+  background: #823DC3;
+  padding: 15px 0;
+  width: 100vw;
+  max-width: 100%;
+}
+
+.newsletter .container {
+  display: grid;
+  grid-template-columns: 35% 65%
+}
+
+.newsletter h4 {
+  color: white;
+  font-size: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.formNewsletter {
+  display: grid;
+  grid-template-columns: 80% 20%;
+}
+.formNewsletter input {
+  width: 100%;
+  text-indent: 5px;
+  font-size: 16px;
+  border: 1px solid white;
+  border-radius: 4px;
+  color: black;
+  font-weight: bold;
+  font-size: 14px;
+}
+.formNewsletter input::placeholder {
+  font-weight: normal;
+}
+.formNewsletter button {
+  margin-left: 20px;
+  font-weight: bold;
+  color: white;
+  border: 2px solid white;
+  border-radius: 4px;
+  background: transparent;
+  font-size: 16px;
+  padding: 5px 15px;
+}
+.formNewsletter button:hover {
+  background: white;
+  color: #823DC3;
+  cursor: pointer;
+}
+.areaNewsletter {
+  padding: 0;
+}

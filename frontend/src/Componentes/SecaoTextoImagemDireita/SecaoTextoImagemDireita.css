@@ -1,0 +1,25 @@
+.secaoTextoImagem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.secaoTextoImagem h2 {
+  font-size: 40px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+}
+.divisaoTextoImagem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imagemSecaoTextoImagem {
+  width: 45vw;
+  height: auto;
+}
+.textoAreaImagem {
+  font-size: 18px;
+  line-height: 1.5em;
+}

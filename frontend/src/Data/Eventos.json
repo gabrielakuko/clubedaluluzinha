@@ -1,0 +1,51 @@
+[
+  {
+    "idEmbaixadora": 1,
+    "nomeEmbaixadora": "Greice Maria",
+    "dataEvento": "20/11",
+    "nomeEvento": "1º Café de Negócios - Chapecó",
+    "resumoEvento": "Vem curtir essa experiencia junto com a gente! Para mais informações sobre o evento clique no botão a baixo. Estamos te esperando!",
+    "linkEvento": "https://www.sympla.com.br/1o-cafe-de-negocios---chapeco__633591"
+  },
+  {
+    "idEmbaixadora": 1,
+    "nomeEmbaixadora": "Greice Maria",
+    "dataEvento": "30/10",
+    "nomeEvento": "Workshop Viva esta experiência",
+    "resumoEvento": "Vem curtir essa experiencia junto com a gente! Para mais informações sobre o evento clique no botão a baixo. Estamos te esperando!",
+    "linkEvento": "https://www.sympla.com.br/workshop-viva-esta-experiencia-chapeco__633537"
+  },
+  {
+    "idEmbaixadora": 1,
+    "nomeEmbaixadora": "Greice Maria",
+    "dataEvento": "18/12",
+    "nomeEvento": "2º Café de Negócios - Chapecó",
+    "resumoEvento": "Vem curtir essa experiencia junto com a gente! Para mais informações sobre o evento clique no botão a baixo. Estamos te esperando!",
+    "linkEvento": "https://www.sympla.com.br/2o-cafe-de-negocios---chapeco__633606"
+  },
+  {
+    "idEmbaixadora": 2,
+    "nomeEmbaixadora": "Fran de Morais",
+    "dataEvento": "24/10",
+    "nomeEvento": "Workshop Viva esta experiência - Blumenau",
+    "resumoEvento": "O Workshop Viva esta Experiência irá alimentar sua mente com conteúdo de qualidade entregue por profissionais selecionados a dedo para te agregar e fazer este dia não passar batido!",
+    "linkEvento": "https://www.sympla.com.br/workshop-viva-esta-experiencia---blumenau__633785"
+  },
+  {
+    "idEmbaixadora": 2,
+    "nomeEmbaixadora": "Fran de Morais",
+    "dataEvento": "22/11",
+    "nomeEvento": "1º Café de Negócios - Blumenau",
+    "resumoEvento": "O café de negócios é um momento mensal que o Clube proporciona as empresárias da cidade para ampliarem seu network e construírem relações de negócios sólidas, com parcerias de valor e conexões de interesse mútuo, sempre trilhando uma trilha de conhecimento mensal.",
+    "linkEvento": "https://www.sympla.com.br/1o-cafe-de-negocios-blumenau__633775"
+  },
+  {
+    "idEmbaixadora": 2,
+    "nomeEmbaixadora": "Fran de Morais",
+    "dataEvento": "13/12",
+    "nomeEvento": "2º Café de Negócios - Blumenau",
+    "resumoEvento": "O café de negócios é um momento mensal que o Clube proporciona as empresárias da cidade para ampliarem seu network e construírem relações de negócios sólidas, com parcerias de valor e conexões de interesse mútuo, sempre trilhando uma trilha de conhecimento mensal.",
+    "linkEvento": "https://www.sympla.com.br/2o-cafe-de-negocios-blumenau__633780"
+  }
+  
+]

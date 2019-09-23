@@ -1,0 +1,78 @@
+.popup {
+  width: 100vw;
+  max-width: 100%;
+  height: 100vh;
+  max-height: 100%;
+  position: fixed;
+  z-index: 999;
+}
+.fundoPopup {
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.areaPopup {
+  background: white;
+  width: 70vw;
+  height: 70vh;
+  border: 1px solid white;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.conteudoPopup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+}
+
+.fecharPopup {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-weight: bold;
+  font-size: 22px;
+  color: #363636;
+  opacity: 0.7;
+}
+.fecharPopup:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+.itemAgenda {
+  padding: 10px 0;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.itemAgenda h4 {
+  font-weight: bold;
+  font-size: 20px;
+  color: #823DC3;
+  text-align: center;
+}
+.itemAgenda p {
+  text-align: justify;
+}
+.itemAgenda .botaoAgenda {
+  background: transparent;
+  color: #823DC3;
+  font-weight: bold;
+  border: 2px solid #823DC3;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 10px;
+}
+.itemAgenda .botaoAgenda:hover {
+  background: #823DC3;
+  color: white;
+}

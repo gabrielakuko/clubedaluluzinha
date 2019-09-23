@@ -1,0 +1,24 @@
+.rodape {
+  background: #6827A5;
+  width: 100vw;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menuRodape {
+  width: 40%;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.menuRodape li a {
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+}
+.menuRodape li:hover {
+  font-weight: bold;
+}

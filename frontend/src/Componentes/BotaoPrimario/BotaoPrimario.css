@@ -1,0 +1,15 @@
+.botaoPrimario {
+  background: #823DC3;
+  color: white;
+  font-weight: bold;
+  padding: 8px 30px;
+  border: 1px solid #823DC3;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.botaoPrimario:hover {
+  background: #54198B;
+  cursor: pointer;
+  border-color: #54198B;
+}

@@ -1,0 +1,27 @@
+.paginaEmbaixadoras {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  align-items: center;
+  grid-gap: 10px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.embaixadoras h2{
+  margin-bottom: 20px;
+}
+
+.chamadaEmbaixadoras {
+  font-size: 18px;
+}
+
+.nossasEmbaixadoras {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nossasEmbaixadoras p {
+  display: flex;
+  align-items: flex-start;
+}
