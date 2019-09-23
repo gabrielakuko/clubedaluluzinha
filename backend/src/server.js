@@ -25,7 +25,7 @@ server.use(express.static(path.join(__dirname, 'frontend/build')))
 
 
 server.get('/', (req, res) => {
-  console.log(__dirname)
+   console.log(__dirname)
 
   res.sendFile(path.join(__dirname, 'frontend/build', 'index.html'))
   // const teste = path.join(__dirname, "frontend/build") 
