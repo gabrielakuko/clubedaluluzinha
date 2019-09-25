@@ -1,6 +1,8 @@
 const express = require('express')
-const mongoose = require('mongoose')
+// const mongoose = require('mongoose')
 const path = require("path")
+const cors = require('cors')
+
 // const EmailController = require('./controllers/EmailController')
 
 
@@ -23,15 +25,21 @@ const port = process.env.PORT || 21096
 server.use(express.static(__dirname))
 server.use(express.static(path.join(__dirname, './frontend/build')))
 
+server.use(cors())
+// Informa para o express que vai ser usado JSON
+server.use(express.json())
 
 server.get('/', (req, res) => {
+  res.send('Hello')
   res.sendFile(path.join(__dirname, './frontend/build', 'index.html'), (err) => {
     if (err) {
       res.status(500).send(err)
     }
   })
-  
   // const teste = path.join(__dirname, "frontend/build") 
+})
+server.post('/email', (req, res) => {
+  console.log(req.body)
 })
 
 // server.get('/email', EmailController.store)
