@@ -20,11 +20,14 @@ import Newsletter from '../../Componentes/Newsletter/Newsletter'
 import Rodape from '../../Componentes/Rodape/Rodape'
 import SecaoTime from '../../Componentes/SecaoTime/SecaoTime'
 import Popup from '../../Componentes/Popup/Popup'
+import Flickity from 'react-flickity-component'
+import "flickity/css/flickity.css"
 
 
 // Importando Data
 import Eventos from '../../Data/Eventos.json'
 import Button from '../../Componentes/Button/Button'
+import ButtonLink from '../../Componentes/ButtonLink/ButtonLink'
 
 
 const Home = () => {
@@ -32,8 +35,13 @@ const Home = () => {
   const arrayEmbaixadoras = ([
     { "id": 1, "imagem": Greice, "nome": "Greice Maria", "cidade": "Rio do Sul - SC" },
     { "id": 2, "imagem": Fran, "nome": "Fran de Morais", "cidade": "Blumenau - SC" },
-    { "id": 3, "imagem": Renata, "nome": "Renata", "cidade": "Brasília - DF" }
-  ])
+    { "id": 3, "imagem": Renata, "nome": "Renata", "cidade": "Brasília - DF" },
+  ]);
+
+  const FlickityOptions = {
+    wrapAround: true,
+    adaptiveHeight: true
+  };
 
   const [abrirPopup, setPopupState] = useState(false)
   const [embaixadoraId, setId] = useState(0)
@@ -42,24 +50,33 @@ const Home = () => {
 
   if (abrirPopup) {
     popupAberto =
-      <Popup fecharPopup={() => setPopupState(false)}>
-        {
-          Eventos.map((detalheEvento, index) => {
-            let idAtual = embaixadoraId
-            if (idAtual === detalheEvento.idEmbaixadora) {
-              return (
-                <div key={index} className="agenda">
-                  <div className="itemAgenda">
-                    <h4>{detalheEvento.dataEvento} - {detalheEvento.nomeEvento}</h4>
-                    <p>{detalheEvento.resumoEvento}</p>
-                    <a href={detalheEvento.linkEvento} className="botaoAgenda">Inscreva-se</a>
+      <Popup fecharPopup={() => setPopupState(false)} tituloPopup="Agenda de Eventos">
+        <Flickity
+          className={'carousel'}
+          elementType={'div'}
+          disableImagesLoaded={false}
+          options={FlickityOptions}
+          reloadOnUpdate
+          static
+        >
+          {
+            Eventos.map((detalheEvento, index) => {
+              let idAtual = embaixadoraId
+              if (idAtual === detalheEvento.idEmbaixadora) {
+                return (
+                  <div key={index} className="carousel-cell agenda">
+                    <div className="itemAgenda">
+                      <h4>{detalheEvento.dataEvento} - {detalheEvento.nomeEvento}</h4>
+                      <p>{detalheEvento.resumoEvento}</p>
+                      <a href={detalheEvento.linkEvento} className="botaoAgenda">Inscreva-se</a>
+                    </div>
                   </div>
-                </div>
-              )
-            }
-            return '';
-          })
-        }
+                )
+              }
+              return '';
+            })
+          }
+        </Flickity>
       </Popup>
   }
   return (
@@ -107,18 +124,18 @@ const Home = () => {
 
           </div>
           <div className="botoesEmbaixadoras">
-            <Button color="secondary" text="Nossas embaixadoras" path="/embaixadoras" />
-            <Button color="primary" text="Quer ser uma embaixadora?" path="/contato" />
+            <ButtonLink color="secondary" text="Nossas embaixadoras" path="/embaixadoras" tipo="link"/>
+            <ButtonLink color="primary" text="Quer ser uma embaixadora?" path="/contato" tipo="link"/>
           </div>
 
         </div>
       </div>
 
       <SecaoTextoImagemDireita titulo="Está buscando escalar seus resultados?" imagem={escalarResultados}>
-        <p><b>Promovemos negócios com mulheres e entre elas!</b></p>
-        <p>Isso acontece de um lado, através de eventos de conteúdo rico, fomento de negócios e muito network de qualidade.  De outro, através das nossas vertentes de capital intelectual, através de consultorias e mentorias empresariais.</p>
-        <p>Mas em ambos, através do empresariado que <b>quer fazer acontecer!</b></p>
-        <Button color="primary" text="Conheça nossas mentorias" path="/mentorias" />
+        <p><b>Quer se destacar no que faz?</b></p>
+        <p>Nossas mentorias são a melhor opção para quem deseja escalar seus resultados e ser provocado a sair da zona de conforto, em busca de melhores resultados.</p>
+        <p>É hora de mostrar para o mundo <b>toda a sua força!</b></p>
+        <ButtonLink color="primary" text="Conheça nossas mentorias" tipo="link" path="/mentorias" />
       </SecaoTextoImagemDireita>
 
       <SecaoTime />

@@ -14,6 +14,8 @@ import Newsletter from '../../Componentes/Newsletter/Newsletter'
 import Rodape from '../../Componentes/Rodape/Rodape'
 import Popup from '../../Componentes/Popup/Popup'
 import Flickity from 'react-flickity-component'
+import ButtonLink from '../../Componentes/ButtonLink/ButtonLink'
+
 import "flickity/css/flickity.css";
 
 // Importando Data
@@ -42,7 +44,7 @@ const Embaixadoras = props => {
 
   if (abrirPopup) {
     popupAberto =
-      <Popup fecharPopup={() => setPopupState(false)}>
+      <Popup fecharPopup={() => setPopupState(false)} tituloPopup="Agenda de Eventos">
         <Flickity
           className={'carousel'}
           elementType={'div'}
@@ -85,6 +87,13 @@ const Embaixadoras = props => {
       </BannerInicial>
 
       <div className="container">
+        <p>As Embaixadoras são licenciadas do Clube que <b>replicam o nosso trabalho mundo a fora.</b></p>
+        <p>Elas desenvolvem nosso formato de eventos, engajam o empresariado feminino a fomentar mais e mais negócios, desenvolvem o mindset de todas que estão sob o guarda-chuvas do Clube, bem como são mentoradas para <b>atingir resultados de alta performance.</b></p>
+        <p>Para se tornar uma Embaixadora, a candidata passa pelo crivo das nossas conselheiras para identificarmos se ela <b>compartilha do perfil e dos objetivos do Clube.</b> </p>
+        <p>Uma vez alinhados, ela adquire uma licença anual para fomentar o formato de negócios  na sua cidade e ser uma de nossas líderes oficiais.</p>
+
+        <p>Se identificou? Então vem fazer parte do time do nosso time de Embaixadoras Licenciadas!</p>
+        <p>Entre em contato que conversamos para te explicar bem detalhadamente como funciona e o quanto podemos evoluir juntas!</p>
 
         <h2>Nossas Embaixadoras</h2>
 
@@ -101,6 +110,11 @@ const Embaixadoras = props => {
           })}
 
         </div>
+
+        <div className="botaoEmbaixadoras">
+          <ButtonLink color="primary" text="Quer ser uma embaixadora?" path="/contato" tipo="link"/>
+        </div>
+
 
       </div>
 

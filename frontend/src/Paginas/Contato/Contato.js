@@ -15,15 +15,11 @@ function Contato() {
       <div className="areaContato">
         <h2>Entre em contato</h2>
         <form className="formContato">
-          <input type="text" className="inputContato" placeholder="Insira seu Nome" id="nome" />
-          <input type="tel" className="inputContato" placeholder="Insira seu Telefone" id="telefone" />
-          <input type="email" className="inputContato" placeholder="Insira seu Email" id="email" />
-          <div className="selectContato">
-            <select>
-              <option value="contato">Contato</option>
-              <option value="serembaixadora">Ser Embaixadora</option>
-            </select>
-          </div>
+          <input type="text" className="inputContato" placeholder="Insira seu Nome" id="nome" name="nome"/>
+          <input type="tel" className="inputContato" placeholder="Insira seu Telefone" id="telefone" name="telefone" />
+          <input type="email" className="inputContato" placeholder="Insira seu Email" id="email" name="email" />
+          <input type="text" className="inputContato" placeholder="Insira o assunto" id="assunto" name="assunto" />
+          <textarea name="mensagem" className="texteAreaContato" placeholder="Digite sua mensagem"></textarea>
           <input type="submit" className="botaoSubmit" value="Enviar" />
         </form>
       </div>

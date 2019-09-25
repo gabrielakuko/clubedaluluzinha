@@ -38,4 +38,13 @@
     width: 100% !important;
     height: auto;
   }
+  .secaoTextoImagemDireita h2 {
+    font-size: 30px;
+  }
+  .textoAreaImagemDireita p {
+    font-size: 14px;
+  }
+  .textoAreaImagemDireita {
+    padding-left: 0;
+  }
 }

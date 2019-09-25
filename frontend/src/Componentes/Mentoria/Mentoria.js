@@ -10,10 +10,10 @@ import Button from '../Button/Button'
 
 const Mentoria = props => (
   <div className="mentoria">
-    <img src={comoFunciona} className="imagemMentoria" alt="Imagem da embaixadora Greice" />
+    <img src={props.imagemMentoria} className="imagemMentoria" alt="Imagem da embaixadora Greice" />
     <h4>{props.nomeMentoria}</h4>
     <p>{props.resumoMentoria}</p>
-    <Button color="secondary" text="Conheça" />
+    <Button color="secondary" text="Conheça" onClick={props.funcoes} />
   </div>
 )
 

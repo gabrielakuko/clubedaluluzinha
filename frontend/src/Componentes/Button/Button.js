@@ -10,10 +10,6 @@ const Button = props => {
       <a href={props.path} className={props.color} onClick={props.onClick}>{props.text}</a>
     );  
   }
-
-  return (
-    <Link to={props.path} className={props.color} onClick={props.onClick}>{props.text}</Link>
-  );
 }
 
 export default Button
