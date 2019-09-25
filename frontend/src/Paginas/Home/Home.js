@@ -43,21 +43,23 @@ const Home = () => {
   if (abrirPopup) {
     popupAberto =
       <Popup fecharPopup={() => setPopupState(false)}>
-        {Eventos.map((detalheEvento, index) => {
-          let idAtual = embaixadoraId
-          if (idAtual === detalheEvento.idEmbaixadora) {
-            return (
-              <div className="agenda">
-                <div className="itemAgenda">
-                  <h4>{detalheEvento.dataEvento} - {detalheEvento.nomeEvento}</h4>
-                  <p>{detalheEvento.resumoEvento}</p>
-                  <a href={detalheEvento.linkEvento} className="botaoAgenda">Inscreva-se</a>
+        {
+          Eventos.map((detalheEvento, index) => {
+            let idAtual = embaixadoraId
+            if (idAtual === detalheEvento.idEmbaixadora) {
+              return (
+                <div key={index} className="agenda">
+                  <div className="itemAgenda">
+                    <h4>{detalheEvento.dataEvento} - {detalheEvento.nomeEvento}</h4>
+                    <p>{detalheEvento.resumoEvento}</p>
+                    <a href={detalheEvento.linkEvento} className="botaoAgenda">Inscreva-se</a>
+                  </div>
                 </div>
-              </div>
-            )
-          }
-          return '';
-        })}
+              )
+            }
+            return '';
+          })
+        }
       </Popup>
   }
   return (
