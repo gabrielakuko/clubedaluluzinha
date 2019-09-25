@@ -1,0 +1,22 @@
+.donatempo p {
+  margin: 15px 0;
+  text-align: justify;
+}
+.formasAssinatura {
+  margin-bottom: 20px;
+}
+
+.formasAssinatura p{
+  margin: 0;
+  font-size: 14px;
+  padding: 0;
+  line-height: 1em;
+  color: #363636
+} 
+.areaBotoesPlano {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  justify-content: center;
+  align-items: center;
+}

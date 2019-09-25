@@ -1,0 +1,15 @@
+.tenhoasas p {
+  margin: 15px 0;
+  text-align: justify;
+}
+.formasAssinatura {
+  margin-bottom: 20px;
+}
+
+.formasAssinatura p{
+  margin: 0;
+  font-size: 14px;
+  padding: 0;
+  line-height: 1em;
+  color: #363636
+} 
