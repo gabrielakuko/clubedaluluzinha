@@ -1,9 +1,2 @@
 /node_modules
-package.json
-yarn.lock
 /frontend/node_modules
-/frontend/public
-/frontend/src
-/frontend/package.json
-/frontend/README.md
-/frontend/yarn.lock
