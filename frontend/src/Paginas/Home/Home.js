@@ -14,8 +14,6 @@ import Menu from '../../Componentes/Menu/Menu'
 import BannerInicial from '../../Componentes/BannerInicial/BannerInicial'
 import SecaoTextoImagem from '../../Componentes/SecaoTextoImagem/SecaoTextoImagem'
 import SecaoTextoImagemDireita from '../../Componentes/SecaoTextoImagemDireita/SecaoTextoImagemDireita'
-import BotaoPrimario from '../../Componentes/BotaoPrimario/BotaoPrimario'
-import BotaoSecundario from '../../Componentes/BotaoSecundario/BotaoSecundario'
 import PlanosAssinatura from '../../Componentes/PlanosAssinatura/PlanosAssinatura'
 import Embaixadora from '../../Componentes/NossasEmbaixadoras/Embaixadora/Embaixadora'
 import Newsletter from '../../Componentes/Newsletter/Newsletter'
@@ -26,6 +24,7 @@ import Popup from '../../Componentes/Popup/Popup'
 
 // Importando Data
 import Eventos from '../../Data/Eventos.json'
+import Button from '../../Componentes/Button/Button'
 
 
 const Home = () => {
@@ -106,8 +105,8 @@ const Home = () => {
 
           </div>
           <div className="botoesEmbaixadoras">
-            <BotaoSecundario textoBotao="Nossas embaixadoras" linkBotaoSecundario="/embaixadoras" />
-            <BotaoPrimario textoBotao="Quer ser uma embaixadora?" linkBotaoPrimario="/contato" />
+            <Button color="secondary" text="Nossas embaixadoras" path="/embaixadoras" />
+            <Button color="primary" text="Quer ser uma embaixadora?" path="/contato" />
           </div>
 
         </div>
@@ -117,7 +116,7 @@ const Home = () => {
         <p><b>Promovemos negócios com mulheres e entre elas!</b></p>
         <p>Isso acontece de um lado, através de eventos de conteúdo rico, fomento de negócios e muito network de qualidade.  De outro, através das nossas vertentes de capital intelectual, através de consultorias e mentorias empresariais.</p>
         <p>Mas em ambos, através do empresariado que <b>quer fazer acontecer!</b></p>
-        <BotaoPrimario textoBotao="Conheça nossas mentorias" linkBotaoPrimario="/mentorias" />
+        <Button color="primary" text="Conheça nossas mentorias" path="/mentorias" />
       </SecaoTextoImagemDireita>
 
       <SecaoTime />

@@ -10,7 +10,7 @@ import BannerInicial from '../../../BannerInicial/BannerInicial'
 
 
 import './MaisBusiness.css'
-import BotaoSecundario from '../../../BotaoSecundario/BotaoSecundario'
+import Button from '../../../Button/Button'
 
 const MaisBusiness = props => (
   <div className="maisbusiness">
@@ -47,8 +47,8 @@ const MaisBusiness = props => (
         </div>
         
         <div className="areaBotoesPlano">
-          <BotaoSecundario  textoBotao="Assinar 6 meses" linkBotaoSecundario="http://pag.ae/7VhoDb77H"/>
-          <BotaoSecundario  textoBotao="Assinar 12 meses" linkBotaoSecundario="http://pag.ae/7VhoEkpnN"/>
+          <Button color="secondary" text="Assinar 6 meses" path="http://pag.ae/7VhoDb77H"/>
+          <Button color="secondary" text="Assinar 12 meses" path="http://pag.ae/7VhoEkpnN"/>
         </div>
       </SecaoTextoImagem>
     </div>

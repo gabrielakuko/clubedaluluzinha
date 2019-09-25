@@ -10,7 +10,7 @@ import BannerInicial from '../../../BannerInicial/BannerInicial'
 
 
 import './DosesInsight.css'
-import BotaoSecundario from '../../../BotaoSecundario/BotaoSecundario'
+import Button from '../../../Button/Button'
 
 const DosesInsight = props => (
   <div className="dosesinsight">
@@ -30,7 +30,7 @@ const DosesInsight = props => (
           <p>Plano C: 12 meses (12 x de R$ 19,90)</p>
         </div>
         
-        <BotaoSecundario  textoBotao="Quero Assinar" linkBotaoSecundario="http://pag.ae/7VdvYx715"/>
+        <Button text="Quero Assinar" path="http://pag.ae/7VdvYx715" color="primary"/>
       </SecaoTextoImagem>
     </div>
   </div>

@@ -8,9 +8,8 @@ import SecaoTextoImagem from '../../../SecaoTextoImagem/SecaoTextoImagem'
 import Menu from '../../../Menu/Menu'
 import BannerInicial from '../../../BannerInicial/BannerInicial'
 
-
 import './TenhoAsas.css'
-import BotaoSecundario from '../../../BotaoSecundario/BotaoSecundario'
+import Button from '../../../Button/Button'
 
 const TenhoAsas = props => (
   <div className="tenhoasas">
@@ -47,8 +46,8 @@ const TenhoAsas = props => (
         </div>
         
         <div className="areaBotoesPlano">
-          <BotaoSecundario  textoBotao="Assinar 6 meses" linkBotaoSecundario="http://pag.ae/7VhoyakEq"/>
-          <BotaoSecundario  textoBotao="Assinar 12 meses" linkBotaoSecundario="http://pag.ae/7VhoBs6g5"/>
+          <Button color="secondary" text="Assinar 6 meses" path="http://pag.ae/7VhoyakEq"/>
+          <Button color="secondary" text="Assinar 12 meses" path="http://pag.ae/7VhoBs6g5"/>
         </div>
         
       </SecaoTextoImagem>

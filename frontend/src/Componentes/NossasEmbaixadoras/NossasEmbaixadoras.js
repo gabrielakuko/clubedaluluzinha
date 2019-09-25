@@ -6,8 +6,6 @@ import Renata from '../../Assets/embaixadorarenatabrasilia.jpg'
 import Greice from '../../Assets/embaixadoragreice.jpg'
 
 // Importando componentes
-import BotaoPrimario from '../BotaoPrimario/BotaoPrimario'
-import BotaoSecundario from '../BotaoSecundario/BotaoSecundario'
 import Embaixadora from './Embaixadora/Embaixadora'
 import Popup from '../../Componentes/Popup/Popup'
 import Slider from '../Slide/Slide';
@@ -16,6 +14,7 @@ import './NossasEmbaixadoras.css'
 
 // Importando Data
 import Eventos from '../../Data/Eventos.json'
+import Button from '../Button/Button'
 
 const NossasEmbaixadoras = props => {
 
@@ -105,8 +104,8 @@ const NossasEmbaixadoras = props => {
           
         </div>
         <div className="botoesEmbaixadoras">
-          <BotaoSecundario  textoBotao="Nossas embaixadoras"/>
-          <BotaoPrimario  textoBotao="Quer ser uma embaixadora?"/>
+          <Button color="secondary" text="Nossas embaixadoras"/>
+          <Button color="primary" text="Quer ser uma embaixadora?"/>
         </div>
         
       </div>

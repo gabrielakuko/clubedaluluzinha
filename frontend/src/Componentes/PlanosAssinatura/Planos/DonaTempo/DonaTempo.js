@@ -10,7 +10,7 @@ import BannerInicial from '../../../BannerInicial/BannerInicial'
 
 
 import './DonaTempo.css'
-import BotaoSecundario from '../../../BotaoSecundario/BotaoSecundario'
+import Button from '../../../Button/Button'
 
 const DonaTempo = props => (
   <div className="donatempo">
@@ -39,8 +39,8 @@ const DonaTempo = props => (
         </div>
         
         <div className="areaBotoesPlano">
-          <BotaoSecundario  textoBotao="Assinar 6 meses" linkBotaoSecundario="http://pag.ae/7Vhe64r-r"/>
-          <BotaoSecundario  textoBotao="Assinar 12 meses" linkBotaoSecundario="http://pag.ae/7VhovR74r"/>
+          <Button color="secondary" text="Assinar 6 meses" path="http://pag.ae/7Vhe64r-r"/>
+          <Button color="secondary" text="Assinar 12 meses" path="http://pag.ae/7VhovR74r"/>
         </div>
         
       </SecaoTextoImagem>
