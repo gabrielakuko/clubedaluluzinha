@@ -48,3 +48,9 @@ span, p, textarea, input, li, a {
   font-weight: 300;
   font-style: normal;
 }
+
+@media screen and (max-width: 700px) {
+  .container {
+    padding: 10px;
+  }
+}

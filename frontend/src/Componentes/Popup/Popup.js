@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 import './Popup.css'
 
@@ -13,7 +13,7 @@ const Popup = (props) => {
     <div className="popup">
       <div className="fundoPopup">
         <div className="areaPopup">
-          <h2 className="tituloPopup">Agenda de Eventos</h2>
+          <h2 className="tituloPopup">{[props.tituloPopup]}</h2>
           <span className="fecharPopup" onClick={() => closePopup()}>X</span>
           <div className="conteudoPopup">
             {props.children}

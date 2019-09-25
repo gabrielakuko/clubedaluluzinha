@@ -14,7 +14,12 @@
 .chamadaEmbaixadoras {
   font-size: 18px;
 }
-
+.botaoEmbaixadoras {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
 .nossasEmbaixadoras {
   display: flex;
   flex-direction: column;
@@ -37,8 +42,21 @@
     width: 100%;
     margin-bottom: 15px;
   }
+  .embaixadoras .conteudoPopup {
+    height: 50vh;
+  }
+  .embaixadoras .carousel {
+    height: 35vh;
+  }
 }
-
+@media screen and (max-width: 700px) {
+  .embaixadoras .conteudoPopup {
+    height: 50vh;
+  }
+  .embaixadoras .carousel {
+    height: 40vh;
+  }
+}
 .agenda {
   width: 100%;
 }

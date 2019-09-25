@@ -6,10 +6,57 @@
 .mentorias h2 {
   margin-bottom: 20px;
 }
-
+.mentoriaPopup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.itemMentoria {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.itemMentoria h4 {
+  font-size: 34px;
+  margin: 0;
+  padding: 0;
+  color: #823DC3;
+}
+.itemMentoria p {
+  line-height: 1.5em;
+  font-size: 16px;
+  text-align: justify;
+}
 @media screen and (max-width: 700px) {
   .gridMentorias {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr; 
+  }
+  .mentorias .areaPopup {
+    height: auto!important;
+  }
+  .itemMentoria h4 {
+    font-size: 26px;
+    text-align: center;
+  }
+  .itemMentoria p {
+    font-size: 14px;
+  }
+  .mentorias .areaPopup .tituloPopup {
+    padding-top: 0;
+  }
+}
+@media screen and (max-width: 570px) {
+  .itemMentoria h4 {
+    font-size: 22px;
+    text-align: center;
+  }
+  .itemMentoria p {
+    font-size: 12px;
+  }
+  .mentoriaPopup {
+    padding: 15px 0;
   }
 }

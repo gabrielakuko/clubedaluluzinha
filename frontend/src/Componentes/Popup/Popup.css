@@ -91,18 +91,22 @@
 @media screen and (max-width: 700px) {
   .conteudoPopup {
     flex-direction: column;
+    width: 95%;
+
   }
   .areaPopup {
-    height: auto;
+    height: 60%;
+    width: 90vw;
   }
   .areaPopup .tituloPopup {
-    font-size: 24px;
+    font-size: 20px;
     margin: 0;
     padding-top: 10px;
   }
   .itemAgenda {
-    margin: 10px 0;
     padding: 10px;
+    max-width: 200px;
+    height: 100%;
   }
   .itemAgenda .botaoAgenda {
     font-size: 12px;
@@ -111,7 +115,14 @@
     font-size: 12px;
   }
   .itemAgenda h4 {
-    font-size: 18px;
+    font-size: 24px;
     margin: 0;
+  }
+  .flickity-prev-next-button {
+    width: 34px!important;
+    height: 34px!important;
+  }
+  .flickity-viewport {
+    height: 100%!important;
   }
 }

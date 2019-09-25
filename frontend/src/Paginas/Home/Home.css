@@ -1,1 +1,76 @@
-@import '../../Componentes/NossasEmbaixadoras/NossasEmbaixadoras.css';
+@import '../Embaixadoras/Embaixadoras.css';
+
+.areaEmbaixadoras {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+.botoesEmbaixadoras {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  align-items: center;
+}
+@media screen and (max-width: 700px)
+ {
+  .botoesEmbaixadoras {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 10px;
+    align-items: center;
+  }
+  .areaEmbaixadoras {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 10px;
+  }
+ }
+ @media screen and (max-width: 700px) {
+  .gridMentorias {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr; 
+  }
+  .Home .areaPopup {
+    height: auto!important;
+  }
+  .itemMentoria h4 {
+    font-size: 26px;
+    text-align: center;
+  }
+  .itemMentoria p {
+    font-size: 14px;
+  }
+  .Home .areaPopup .tituloPopup {
+    padding-top: 0;
+  }
+}
+@media screen and (max-width: 700px) {
+  .paginaEmbaixadoras {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .Home .conteudoPopup {
+    height: 50vh;
+  }
+  .Home .carousel {
+    height: 35vh;
+  }
+}
+@media screen and (max-width: 570px) {
+  .Home .conteudoPopup {
+    height: 50vh;
+  }
+  .Home .carousel {
+    height: 40vh;
+  }
+}

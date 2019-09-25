@@ -1,0 +1,20 @@
+[
+  {
+    "idMentoria": 1,
+    "nomeMentoria": "Mentoria Delas",
+    "resumoMentoria": "Esta mentoria é individual e será ministrada pelas founders Paula e Daiane. É direcionada para empresários que buscam uma solução de rápida implementação.  Aqui você terá acesso exclusivo a um programa de mentoria completo preparado por elas através do vasto conhecimento do mercado empresarial pelos quais passaram por mais de 15 anos e pela capacitação de alta performance que será repassada ao mentorado. Envolve 5 encontros presenciais e uma série de 05 vídeo-aulas para dar sequencia ao processo. Você vai ser provocado a repensar seus processos, suas metas e como atingir objetivos comerciais práticos.",
+    "imagemMentoria": "../Assets/comofunciona.jpg"
+  },
+  {
+    "idMentoria": 2,
+    "nomeMentoria": "Consultoria Empresarial",
+    "resumoMentoria": "A consultoria empresarial é ministrada por uma de nossas founders, Daiane Steffen.   Nesta consultoria que envolve 4 encontros presenciais e 5 reuniões on-line ao longo de 02 meses de acompanhamento, vamos te ajudar a reorganizar a sua empresa e seus objetivos estratégicos. Vamos te conduzir através de ferramentas específicas que serão selecionadas após diagnóstico de análise da situação da empresa.",
+    "imagemMentoria": "../../../Assets/comofunciona.jpg"
+  },
+  {
+    "idMentoria": 3,
+    "nomeMentoria": "Trilha do conhecimento",
+    "resumoMentoria": "A nossa trilha do conhecimento é composta por uma série de 15 vídeos que irão te conduzir por 21 dias a uma vida de novos hábitos. Vamos te provocar a pensar sob 3 pilares:  corpo, mente e espírito.   Esta trilha é específica para mulheres e totalmente pensada para nossos dilemas.  Aqui você vai ser conduzida por profissionais selecionadas a dedo para repensar seus objetivos, sonhos e como tomar as rédeas da sua vida rumo a sua melhor versão.",
+    "imagemMentoria": "../../../Assets/comofunciona.jpg"
+  }
+]
