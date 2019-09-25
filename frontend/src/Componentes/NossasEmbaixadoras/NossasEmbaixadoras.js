@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 
 // Importando Imagens
 import Fran from '../../Assets/embaixadorafran.jpg'
-import Jani from '../../Assets/embaixadorajanidemenezes.jpg'
 import Renata from '../../Assets/embaixadorarenatabrasilia.jpg'
 import Greice from '../../Assets/embaixadoragreice.jpg'
 
@@ -12,8 +11,6 @@ import BotaoSecundario from '../BotaoSecundario/BotaoSecundario'
 import Embaixadora from './Embaixadora/Embaixadora'
 import Popup from '../../Componentes/Popup/Popup'
 import Slider from '../Slide/Slide';
-
-
 
 import './NossasEmbaixadoras.css'
 
@@ -29,7 +26,7 @@ const NossasEmbaixadoras = props => {
   ])
 
   const [abrirPopup, setPopupState] = useState(true)
-  const [embaixadoraId, setId] = useState(0)
+  const [setId] = useState(0)
 
     let popupAberto
 

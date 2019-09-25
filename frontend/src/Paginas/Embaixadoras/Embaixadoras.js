@@ -7,8 +7,6 @@ import Renata from '../../Assets/embaixadorarenatabrasilia.jpg'
 import Greice from '../../Assets/embaixadoragreice.jpg'
 
 // Importando componentes
-import BotaoPrimario from '../../Componentes/BotaoSecundario/BotaoSecundario'
-import BotaoSecundario from '../../Componentes/BotaoSecundario/BotaoSecundario'
 import Embaixadora from '../../Componentes/NossasEmbaixadoras/Embaixadora/Embaixadora'
 import Menu from '../../Componentes/Menu/Menu'
 import BannerInicial from '../../Componentes/BannerInicial/BannerInicial'
@@ -24,20 +22,20 @@ import './Embaixadoras.css'
 
 const Embaixadoras = props => {
 
-  const arrayEmbaixadoras  = ([
-    {"id": 1, "imagem": Greice, "nome": "Greice Maria", "cidade": "Rio do Sul - SC"},
-    {"id": 2, "imagem": Fran, "nome": "Fran de Morais", "cidade": "Blumenau - SC"},
-    {"id": 3, "imagem": Renata, "nome": "Renata", "cidade": "Brasília - DF"},
-    {"id": 4, "imagem": Jani, "nome": "Jani de Menezes", "cidade": "Chapeço - SC"}
+  const arrayEmbaixadoras = ([
+    { "id": 1, "imagem": Greice, "nome": "Greice Maria", "cidade": "Rio do Sul - SC" },
+    { "id": 2, "imagem": Fran, "nome": "Fran de Morais", "cidade": "Blumenau - SC" },
+    { "id": 3, "imagem": Renata, "nome": "Renata", "cidade": "Brasília - DF" },
+    { "id": 4, "imagem": Jani, "nome": "Jani de Menezes", "cidade": "Chapeço - SC" }
   ])
 
   const [abrirPopup, setPopupState] = useState(false)
   const [embaixadoraId, setId] = useState(0)
 
-    let popupAberto
+  let popupAberto
 
-    if(abrirPopup) {
-      popupAberto = 
+  if (abrirPopup) {
+    popupAberto =
       <Popup fecharPopup={() => setPopupState(false)}>
         {/* <Slider
           options={{
@@ -66,32 +64,35 @@ const Embaixadoras = props => {
         </Slider> */}
         <Slider
           options={{
-          autoPlay: 4000,
-          pauseAutoPlayOnHover: true,
-          wrapAround: true,
-          fullscreen: true,
-          adaptiveHeight: false,
+            autoPlay: 4000,
+            pauseAutoPlayOnHover: true,
+            wrapAround: true,
+            fullscreen: true,
+            adaptiveHeight: false,
           }}
-          >
-          {Eventos.map((evento, index) => {
-            let idAtual = embaixadoraId
-            if ( idAtual == evento.idEmbaixadora) {
-            return (
-              <div className="agenda">
-                <div className="itemAgenda" key={index}>
-                  <h4>{evento.dataEvento} - {evento.nomeEvento}</h4>
-                  <p>{evento.resumoEvento}</p>
-                  <a href={evento.linkEvento} className="botaoAgenda">Inscreva-se</a>
-                </div>
-              </div>
-              )
-            }
-          })}
-        
+        >
+          {
+            Eventos.map((evento, index) => {
+              let idAtual = embaixadoraId
+              if (idAtual === evento.idEmbaixadora) {
+                return (
+                  <div className="agenda">
+                    <div className="itemAgenda" key={index}>
+                      <h4>{evento.dataEvento} - {evento.nomeEvento}</h4>
+                      <p>{evento.resumoEvento}</p>
+                      <a href={evento.linkEvento} className="botaoAgenda">Inscreva-se</a>
+                    </div>
+                  </div>
+                );
+              }
+              return '';
+            })
+          }
+
         </Slider>
-      </Popup> 
-    }
-    
+      </Popup>
+  }
+
 
   return (
     <div className="embaixadoras">
@@ -106,22 +107,22 @@ const Embaixadoras = props => {
 
       <div className="container">
 
-          <h2>Nossas Embaixadoras</h2>
+        <h2>Nossas Embaixadoras</h2>
 
-          <div className="paginaEmbaixadoras">
+        <div className="paginaEmbaixadoras">
 
           {arrayEmbaixadoras.map((embaixadora, index) => {
             return (
-              <Embaixadora key={embaixadora.id} imagemEmbaixadora={embaixadora.imagem} descricaoImagem="Imagem da embaixadora Greice" nomeEmbaixadora={embaixadora.nome} cidadeEmbaixadora={embaixadora.cidade} idEmbaixadora={embaixadora.id} 
-              funcoes={() => {
-                setPopupState(true)
-                setId(embaixadora.id)
-              }} /> 
+              <Embaixadora key={embaixadora.id} imagemEmbaixadora={embaixadora.imagem} descricaoImagem="Imagem da embaixadora Greice" nomeEmbaixadora={embaixadora.nome} cidadeEmbaixadora={embaixadora.cidade} idEmbaixadora={embaixadora.id}
+                funcoes={() => {
+                  setPopupState(true)
+                  setId(embaixadora.id)
+                }} />
             )
-          })} 
-            
-          </div>
-          
+          })}
+
+        </div>
+
       </div>
 
       <Newsletter />

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import { Link } from 'react-router-dom';
 import logo from '../../Assets/coroa.svg'
 import './Menu.css'
 
@@ -40,7 +40,7 @@ const Menu = (props) => {
           <header className="headerMenu">
               <nav className="navbar">
                   <div className="area-logo">
-                      <a href="/"><img src={logo} className="logo-svg" alt="Logo"/></a>
+                      <Link to="/"><img src={logo} className="logo-svg" alt="Logo"/></Link>
                   </div>
                   <button className={classesBotao} onClick={abrindoEFechandoMenu}>
                       <div className="linhaMenu"></div>

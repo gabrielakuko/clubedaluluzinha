@@ -7,7 +7,7 @@ const SecaoTextoImagemDireita = props => (
     <div className="secaoTextoImagemDireita">
       <h2>{props.titulo}</h2>
       <div className="divisaoTextoImagemDireita">
-        <img src={props.imagem} className="imagemSecaoTextoImagemDireita"/>
+        <img src={props.imagem} alt="" className="imagemSecaoTextoImagemDireita"/>
         <div className="textoAreaImagemDireita">
           {props.children}
         </div>

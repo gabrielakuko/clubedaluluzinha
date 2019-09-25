@@ -3,11 +3,8 @@ import React from 'react'
 // Importando Imagens
 import Paula from '../../Assets/paulasteffen.jpg'
 import Daiane from '../../Assets/daianesteffen.jpg'
-import Luciano from '../../Assets/lucianovital.jpg'
 
 // Importando componentes
-import BotaoPrimario from '../BotaoPrimario/BotaoPrimario'
-import BotaoSecundario from '../BotaoSecundario/BotaoSecundario'
 import Equipe from '../Equipe/Equipe'
 
 import './SecaoTime.css'

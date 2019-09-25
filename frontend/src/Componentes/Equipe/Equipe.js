@@ -1,9 +1,5 @@
 import React from 'react'
 
-// Importando componentes
-import BotaoPrimario from '../BotaoPrimario/BotaoPrimario'
-import BotaoSecundario from '../BotaoSecundario/BotaoSecundario'
-
 import './Equipe.css'
 
 const Equipe = props => (

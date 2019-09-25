@@ -8,8 +8,6 @@ import comoFunciona from '../../Assets/comofunciona.jpg'
 import Menu from '../../Componentes/Menu/Menu'
 import BannerInicial from '../../Componentes/BannerInicial/BannerInicial'
 import SecaoTextoImagem from '../../Componentes/SecaoTextoImagem/SecaoTextoImagem'
-import BotaoPrimario from '../../Componentes/BotaoPrimario/BotaoPrimario'
-import BotaoSecundario from '../../Componentes/BotaoSecundario/BotaoSecundario'
 import Newsletter from '../../Componentes/Newsletter/Newsletter'
 import Rodape from '../../Componentes/Rodape/Rodape'
 

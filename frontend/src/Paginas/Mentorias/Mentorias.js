@@ -2,7 +2,6 @@ import React from 'react'
 import './Mentorias.css'
 
 // Importando componentes
-import Menu from '../../Componentes/Menu/Menu'
 import BannerInicial from '../../Componentes/BannerInicial/BannerInicial'
 import Newsletter from '../../Componentes/Newsletter/Newsletter'
 import Rodape from '../../Componentes/Rodape/Rodape'
