@@ -13,6 +13,8 @@ import BannerInicial from '../../Componentes/BannerInicial/BannerInicial'
 import Newsletter from '../../Componentes/Newsletter/Newsletter'
 import Rodape from '../../Componentes/Rodape/Rodape'
 import Popup from '../../Componentes/Popup/Popup'
+import Flickity from 'react-flickity-component'
+import "flickity/css/flickity.css";
 
 // Importando Data
 import Eventos from '../../Data/Eventos.json'
@@ -26,7 +28,12 @@ const Embaixadoras = props => {
     { "id": 2, "imagem": Fran, "nome": "Fran de Morais", "cidade": "Blumenau - SC" },
     { "id": 3, "imagem": Renata, "nome": "Renata", "cidade": "Brasília - DF" },
     { "id": 4, "imagem": Jani, "nome": "Jani de Menezes", "cidade": "Chapeço - SC" }
-  ])
+  ]);
+
+  const FlickityOptions = {
+    wrapAround: true,
+    adaptiveHeight: true
+  };
 
   const [abrirPopup, setPopupState] = useState(false)
   const [embaixadoraId, setId] = useState(0)
@@ -36,23 +43,32 @@ const Embaixadoras = props => {
   if (abrirPopup) {
     popupAberto =
       <Popup fecharPopup={() => setPopupState(false)}>
-        {
-          Eventos.map((detalheEvento, index) => {
-            let idAtual = embaixadoraId
-            if (idAtual === detalheEvento.idEmbaixadora) {
-              return (
-                <div key={index} className="agenda">
-                  <div className="itemAgenda">
-                    <h4>{detalheEvento.dataEvento} - {detalheEvento.nomeEvento}</h4>
-                    <p>{detalheEvento.resumoEvento}</p>
-                    <a href={detalheEvento.linkEvento} className="botaoAgenda">Inscreva-se</a>
+        <Flickity
+          className={'carousel'}
+          elementType={'div'}
+          disableImagesLoaded={false}
+          options={FlickityOptions}
+          reloadOnUpdate
+          static
+        >
+          {
+            Eventos.map((detalheEvento, index) => {
+              let idAtual = embaixadoraId
+              if (idAtual === detalheEvento.idEmbaixadora) {
+                return (
+                  <div key={index} className="carousel-cell agenda">
+                    <div className="itemAgenda">
+                      <h4>{detalheEvento.dataEvento} - {detalheEvento.nomeEvento}</h4>
+                      <p>{detalheEvento.resumoEvento}</p>
+                      <a href={detalheEvento.linkEvento} className="botaoAgenda">Inscreva-se</a>
+                    </div>
                   </div>
-                </div>
-              )
-            }
-            return '';
-          })
-        }
+                )
+              }
+              return '';
+            })
+          }
+        </Flickity>
       </Popup>
   }
 
