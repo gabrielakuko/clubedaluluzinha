@@ -13,7 +13,7 @@
 
 .textoBanner {
   width: 40vw;
-  min-width: 350px;
+  min-width: 250px;
   text-align: center;
 }
 
@@ -21,10 +21,49 @@
   margin: 0;
   padding: 0;
   color: white;
+  font-family: realist, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 35px;
 }
 
 #foraDaCaixa {
-  background: url('../../Assets/banner1.png');
+  background: url('../../Assets/banner1.png') center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#quemSomos {
+  background: url('../../Assets/quemSomos.jpg') center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#embaixadoras {
+  background: url('../../Assets/embaixadoras.jpg') center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#mentorias {
+  background: url('../../Assets/mentorias.jpg') center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#dosesinsight {
+  background: url('../../Assets/dosesinsight.jpg') center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#donatempo {
+  background: url('../../Assets/contato.jpg') center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#tenhoasas {
+  background: url('../../Assets/tenhoasasbanner.jpg') center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#maisbusiness {
+  background: url('../../Assets/maisbusinessbanner.jpg') center center;
   background-repeat: no-repeat;
   background-size: cover;
 }

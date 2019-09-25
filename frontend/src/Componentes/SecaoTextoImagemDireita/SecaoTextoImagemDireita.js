@@ -4,11 +4,11 @@ import './SecaoTextoImagemDireita.css'
 
 const SecaoTextoImagemDireita = props => (
   <div className="container">
-    <div className="secaoTextoImagem">
+    <div className="secaoTextoImagemDireita">
       <h2>{props.titulo}</h2>
-      <div className="divisaoTextoImagem">
-        <img src={props.imagem} className="imagemSecaoTextoImagem"/>
-        <div className="textoAreaImagem">
+      <div className="divisaoTextoImagemDireita">
+        <img src={props.imagem} className="imagemSecaoTextoImagemDireita"/>
+        <div className="textoAreaImagemDireita">
           {props.children}
         </div>
       </div>

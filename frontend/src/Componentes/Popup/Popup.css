@@ -76,3 +76,31 @@
   background: #823DC3;
   color: white;
 }
+
+@media screen and (max-width: 700px) {
+  .conteudoPopup {
+    flex-direction: column;
+  }
+  .areaPopup {
+    height: auto;
+  }
+  .areaPopup .tituloPopup {
+    font-size: 24px;
+    margin: 0;
+    padding-top: 10px;
+  }
+  .itemAgenda {
+    margin: 10px 0;
+    padding: 10px;
+  }
+  .itemAgenda .botaoAgenda {
+    font-size: 12px;
+  }
+  .itemAgenda p {
+    font-size: 12px;
+  }
+  .itemAgenda h4 {
+    font-size: 18px;
+    margin: 0;
+  }
+}

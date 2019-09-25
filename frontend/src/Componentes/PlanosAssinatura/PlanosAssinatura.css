@@ -25,4 +25,7 @@
   .planosDeAssinatura .container .itensPlano {
     flex-direction: column;
   }
+  .planosDeAssinatura .container .itensPlano .itemPlanos {
+    margin-bottom: 20px;
+  }
 }

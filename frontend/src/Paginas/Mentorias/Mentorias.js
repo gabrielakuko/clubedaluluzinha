@@ -1,9 +1,6 @@
 import React from 'react'
 import './Mentorias.css'
 
-// Importando Imagens
-import comoFunciona from '../../Assets/comofunciona.jpg'
-
 // Importando componentes
 import Menu from '../../Componentes/Menu/Menu'
 import BannerInicial from '../../Componentes/BannerInicial/BannerInicial'
@@ -16,10 +13,10 @@ import Mentoria from '../../Componentes/Mentoria/Mentoria'
 function Mentorias() {
   return (
     <div className="mentorias">
-      <Menu />
 
-      <BannerInicial titulo="Compromisso com
-o seu sucesso." banner="foraDaCaixa"/>
+      <BannerInicial banner="mentorias">
+        <h1><strong>Compromisso</strong> com o<br></br>seu<strong> sucesso</strong></h1>
+      </BannerInicial>
 
       <div className="container">
 

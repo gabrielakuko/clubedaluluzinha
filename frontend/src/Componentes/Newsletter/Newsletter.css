@@ -52,3 +52,24 @@
 .areaNewsletter {
   padding: 0;
 }
+
+@media screen and (max-width: 700px) {
+  .newsletter .container, .formNewsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .formNewsletter {
+    width: 100%;
+  }
+  .formNewsletter button{
+    margin-left: 0;
+    margin-top: 10px;
+    width: 100%;
+  }
+  .formNewsletter input{
+    padding: 5px 0;
+    margin-top: 10px;
+    width: 100%;
+  }
+}

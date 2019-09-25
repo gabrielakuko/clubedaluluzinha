@@ -1,14 +1,19 @@
 import React, { useState } from 'react'
+
+import { Link } from 'react-router-dom'; // Importando react router dom
+
 import './Home.css'
 
 // Importando Imagens
 import comoFunciona from '../../Assets/comofunciona.jpg'
+import escalarResultados from '../../Assets/escalarseusresultados.jpg'
 import Fran from '../../Assets/embaixadorafran.jpg'
 import Jani from '../../Assets/embaixadorajanidemenezes.jpg'
 import Renata from '../../Assets/embaixadorarenatabrasilia.jpg'
 import Greice from '../../Assets/embaixadoragreice.jpg'
 
 // Importando componentes
+import ExemploComponente from '../../Componentes/ExemploComponente/ExemploComponente'
 import Menu from '../../Componentes/Menu/Menu'
 import BannerInicial from '../../Componentes/BannerInicial/BannerInicial'
 import SecaoTextoImagem from '../../Componentes/SecaoTextoImagem/SecaoTextoImagem'
@@ -36,7 +41,7 @@ const  Home = () => {
     {"id": 3, "imagem": Renata, "nome": "Renata", "cidade": "Brasília - DF"}  
   ])
 
-  const [abrirPopup, setPopupState] = useState(true)
+  const [abrirPopup, setPopupState] = useState(false)
   const [embaixadoraId, setId] = useState(0)
 
     let popupAberto
@@ -66,8 +71,9 @@ const  Home = () => {
       {popupAberto}
 
       <Menu />
-      <BannerInicial titulo="Pensando fora da caixa
-      e gerando negócios mundo afora." banner="foraDaCaixa"/>
+      <BannerInicial banner="foraDaCaixa">
+        <h1>Pensando <strong>fora da caixa</strong><br></br>e gerando negócios <strong> mundo afora.</strong></h1>
+      </BannerInicial>
 
       <SecaoTextoImagem titulo="Como Funciona?" imagem={comoFunciona}>
         <p><strong>Promovemos negócios com mulheres e entre elas!</strong></p>
@@ -76,6 +82,8 @@ const  Home = () => {
       </SecaoTextoImagem>
 
       <PlanosAssinatura />
+
+      <ExemploComponente />
       
       <div className="nossasEmbaixadoras">
       {popupAberto}
@@ -105,18 +113,18 @@ const  Home = () => {
           
         </div>
         <div className="botoesEmbaixadoras">
-          <BotaoSecundario  textoBotao="Nossas embaixadoras"/>
-          <BotaoPrimario  textoBotao="Quer ser uma embaixadora?"/>
+          <BotaoSecundario  textoBotao="Nossas embaixadoras" linkBotaoSecundario="/embaixadoras" />
+          <BotaoPrimario  textoBotao="Quer ser uma embaixadora?" linkBotaoPrimario="/contato" />
         </div>
         
       </div>
     </div>
       
-      <SecaoTextoImagemDireita titulo="Está buscando escalar seus resultados?" imagem={comoFunciona}>
-        <p><strong>Promovemos negócios com mulheres e entre elas!</strong></p>
+      <SecaoTextoImagemDireita titulo="Está buscando escalar seus resultados?" imagem={escalarResultados}>
+        <p><b>Promovemos negócios com mulheres e entre elas!</b></p>
         <p>Isso acontece de um lado, através de eventos de conteúdo rico, fomento de negócios e muito network de qualidade.  De outro, através das nossas vertentes de capital intelectual, através de consultorias e mentorias empresariais.</p>
-        <p>Mas em ambos, através do empresariado que <strong>quer fazer acontecer!</strong></p>
-        <BotaoPrimario  textoBotao="Conheça nossas mentorias"/>
+        <p>Mas em ambos, através do empresariado que <b>quer fazer acontecer!</b></p>
+        <BotaoPrimario  textoBotao="Conheça nossas mentorias" linkBotaoPrimario="/mentorias"/>
       </SecaoTextoImagemDireita>
 
       <SecaoTime />

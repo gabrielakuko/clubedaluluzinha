@@ -8,7 +8,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: url('../../Assets/banner1.png') center center;
+  background: url('../../Assets/contato.jpg') center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -62,6 +62,22 @@
   cursor: pointer;
   background: white;
   color: #823DC3;
+}
+	
+.selectContato {
+  width:100%;  /* Tamanho final do select */
+  overflow:hidden; /* Esconde o conteúdo que passar do tamanho especificado */
+}
 
-
+.selectContato select {
+    background: transparent;  /* Imagem de fundo (Seta) */
+    background-position: 100% center;  /*Posição da imagem do background*/
+    width: 100%; /* Tamanho do select, maior que o tamanho da div "div-select" */
+    height:30px; /* altura do select, importante para que tenha a mesma altura em todo os navegadores */
+    color: white;
+    font-size: 12px;
+    padding: 0 15px;
+    border-radius: 5px;  
+    border: none;
+    border-bottom: 1px solid white;  
 }

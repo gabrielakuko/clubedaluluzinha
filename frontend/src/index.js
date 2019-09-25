@@ -8,6 +8,13 @@ import Mentorias from './Paginas/Mentorias/Mentorias';
 import QuemSomos from './Paginas/QuemSomos/QuemSomos';
 import Contato from './Paginas/Contato/Contato';
 
+import DosesInsight from './Componentes/PlanosAssinatura/Planos/DosesInsight/DosesInsight';
+import DonaTempo from './Componentes/PlanosAssinatura/Planos/DonaTempo/DonaTempo';
+import MaisBusiness from './Componentes/PlanosAssinatura/Planos/MaisBusiness/MaisBusiness';
+import TenhoAsas from './Componentes/PlanosAssinatura/Planos/TenhoAsas/TenhoAsas';
+
+
+
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter, Switch, Route } from 'react-router-dom'; // Importando react router dom
 
@@ -19,6 +26,11 @@ ReactDOM.render(
             <Route path="/mentorias" component={Mentorias} />
             <Route path="/quem-somos" component={QuemSomos} />
             <Route path="/contato" component={Contato} />
+            <Route path="/planos/dosesinsight" component={DosesInsight} />
+            <Route path="/planos/donadotempo" component={DonaTempo} />
+            <Route path="/planos/tenhoasas" component={TenhoAsas} />
+            <Route path="/planos/maisbusiness" component={MaisBusiness} />
+
         </Switch>
     </BrowserRouter>
     , document.getElementById('root'));

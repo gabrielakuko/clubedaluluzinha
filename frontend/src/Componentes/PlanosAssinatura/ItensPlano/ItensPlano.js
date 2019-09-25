@@ -9,7 +9,7 @@ const ItensPlano = props => (
     <img src={props.imagem} className="iconePlanos" alt="Doses de Insight Símbolo"/>
     <h3>{props.titulo}</h3>
     <p>{props.texto}</p>
-    <BotaoSecundario  textoBotao="Conheça"/>
+    <BotaoSecundario  textoBotao="Conheça" linkBotaoSecundario={props.link} />
   </div>
 )
 

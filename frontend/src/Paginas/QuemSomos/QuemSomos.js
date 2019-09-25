@@ -18,8 +18,10 @@ function QuemSomos() {
   return (
     <div className="QuemSomos">
       <Menu />
-      <BannerInicial titulo="Conheça nossa história
-e nosso compromisso." banner="foraDaCaixa"/>
+
+      <BannerInicial banner="quemSomos">
+        <h1>Conheça nossa <strong>história</strong><br></br>e nosso<strong> compromisso</strong></h1>
+      </BannerInicial>
 
       <SecaoTextoImagem titulo="Nossa Motivação" imagem={comoFunciona}>
         <p>Uma empresa que nasceu com propósito firme: <strong>Gerar e impulsionar negócios com mulheres e entre elas!</strong></p>

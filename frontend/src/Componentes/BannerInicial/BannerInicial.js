@@ -5,7 +5,7 @@ import './BannerInicial.css'
 const BannerInicial = props => (
 	<div className="bannerInicial" id={props.banner}>
 		<div className="textoBanner">
-			<h1>{props.titulo}</h1>
+			{props.children}
 		</div>
 	</div>
 )

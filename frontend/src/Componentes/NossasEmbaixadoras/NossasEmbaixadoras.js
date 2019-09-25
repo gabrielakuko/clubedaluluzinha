@@ -11,6 +11,8 @@ import BotaoPrimario from '../BotaoPrimario/BotaoPrimario'
 import BotaoSecundario from '../BotaoSecundario/BotaoSecundario'
 import Embaixadora from './Embaixadora/Embaixadora'
 import Popup from '../../Componentes/Popup/Popup'
+import Slider from '../Slide/Slide';
+
 
 
 import './NossasEmbaixadoras.css'
@@ -34,21 +36,46 @@ const NossasEmbaixadoras = props => {
     if(abrirPopup) {
       popupAberto = 
       <Popup fecharPopup={() => setPopupState(false)}>
-        {Eventos.map((detalheEvento, index) => {
-          let idAtual = embaixadoraId
-          if ( idAtual == detalheEvento.idEmbaixadora) {
-            return (
-              <div className="agenda">
-                <div className="itemAgenda">
-                  <h4>{detalheEvento.dataEvento} - {detalheEvento.nomeEvento}</h4>
-                  <p>{detalheEvento.resumoEvento}</p>
-                  <a href={detalheEvento.linkEvento} className="botaoAgenda">Inscreva-se</a>
+        {/* <Slider
+          options={{
+          autoPlay: 4000,
+          pauseAutoPlayOnHover: true,
+          wrapAround: true,
+          fullscreen: false,
+          adaptiveHeight: false,
+          }}
+          >
+          {Eventos.map((detalheEvento, index) => {
+            let idAtual = embaixadoraId
+            if ( idAtual == detalheEvento.idEmbaixadora) {
+              return (
+                <div className="agenda">
+                  <div className="itemAgenda" key={index}>
+                    <h4>{detalheEvento.dataEvento} - {detalheEvento.nomeEvento}</h4>
+                    <p>{detalheEvento.resumoEvento}</p>
+                    <a href={detalheEvento.linkEvento} className="botaoAgenda">Inscreva-se</a>
+                  </div>
                 </div>
-              </div>
-              
-            )
-          }
-        })} 
+                
+              )
+            }
+          })} 
+        </Slider> */}
+        <Slider
+          options={{
+          autoPlay: 4000,
+          pauseAutoPlayOnHover: true,
+          wrapAround: false,
+          fullscreen: false,
+          adaptiveHeight: true,
+          }}
+          >
+          {Eventos.map((evento, index) => (
+          <div key={index} style={{ width: '80%', height: '400px', margin: '0 0.5em' }}>
+          <h1>{evento.nomeEvento}</h1>
+          </div>
+          ))}
+        </Slider>
       </Popup> 
     }
 
@@ -69,14 +96,14 @@ const NossasEmbaixadoras = props => {
 
         <div className="areaEmbaixadoras">
 
-          {arrayEmbaixadoras.map((embaixadora, index) => {
-            return (
-              <Embaixadora key={embaixadora.id} imagemEmbaixadora={embaixadora.imagem} descricaoImagem="Imagem da embaixadora Greice" nomeEmbaixadora={embaixadora.nome} cidadeEmbaixadora={embaixadora.cidade} idEmbaixadora={embaixadora.id} 
-              funcoes={() => {
-                setPopupState(true)
-                setId(embaixadora.id)
-              }} /> 
-            )
+          {arrayEmbaixadoras.map((embaixadora, index) => {   
+              return (
+                <Embaixadora key={embaixadora.id} imagemEmbaixadora={embaixadora.imagem} descricaoImagem="Imagem da embaixadora Greice" nomeEmbaixadora={embaixadora.nome} cidadeEmbaixadora={embaixadora.cidade} idEmbaixadora={embaixadora.id} 
+                funcoes={() => {
+                  setPopupState(true)
+                  setId(embaixadora.id)
+                }} /> 
+              )
           })} 
           
         </div>

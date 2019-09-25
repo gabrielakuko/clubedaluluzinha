@@ -15,6 +15,7 @@ import BannerInicial from '../../Componentes/BannerInicial/BannerInicial'
 import Newsletter from '../../Componentes/Newsletter/Newsletter'
 import Rodape from '../../Componentes/Rodape/Rodape'
 import Popup from '../../Componentes/Popup/Popup'
+import Slider from '../../Componentes/Slide/Slide'
 
 // Importando Data
 import Eventos from '../../Data/Eventos.json'
@@ -38,21 +39,56 @@ const Embaixadoras = props => {
     if(abrirPopup) {
       popupAberto = 
       <Popup fecharPopup={() => setPopupState(false)}>
-        {Eventos.map((detalheEvento, index) => {
-          let idAtual = embaixadoraId
-          if ( idAtual == detalheEvento.idEmbaixadora) {
+        {/* <Slider
+          options={{
+          autoPlay: 4000,
+          pauseAutoPlayOnHover: true,
+          wrapAround: true,
+          fullscreen: false,
+          adaptiveHeight: false,
+          }}
+          >
+          {Eventos.map((evento, index) => {
+            let idAtual = embaixadoraId
+            if ( idAtual == detalheEvento.idEmbaixadora) {
+              return (
+                <div className="agenda">
+                  <div className="itemAgenda" key={index}>
+                    <h4>{detalheEvento.dataEvento} - {detalheEvento.nomeEvento}</h4>
+                    <p>{detalheEvento.resumoEvento}</p>
+                    <a href={detalheEvento.linkEvento} className="botaoAgenda">Inscreva-se</a>
+                  </div>
+                </div>
+                
+              )
+            }
+          })} 
+        </Slider> */}
+        <Slider
+          options={{
+          autoPlay: 4000,
+          pauseAutoPlayOnHover: true,
+          wrapAround: true,
+          fullscreen: true,
+          adaptiveHeight: false,
+          }}
+          >
+          {Eventos.map((evento, index) => {
+            let idAtual = embaixadoraId
+            if ( idAtual == evento.idEmbaixadora) {
             return (
               <div className="agenda">
-                <div className="itemAgenda">
-                  <h4>{detalheEvento.dataEvento} - {detalheEvento.nomeEvento}</h4>
-                  <p>{detalheEvento.resumoEvento}</p>
-                  <a href={detalheEvento.linkEvento} className="botaoAgenda">Inscreva-se</a>
+                <div className="itemAgenda" key={index}>
+                  <h4>{evento.dataEvento} - {evento.nomeEvento}</h4>
+                  <p>{evento.resumoEvento}</p>
+                  <a href={evento.linkEvento} className="botaoAgenda">Inscreva-se</a>
                 </div>
               </div>
-              
-            )
-          }
-        })} 
+              )
+            }
+          })}
+        
+        </Slider>
       </Popup> 
     }
     
@@ -64,7 +100,9 @@ const Embaixadoras = props => {
 
       <Menu />
 
-      <BannerInicial titulo="Quem nos ajuda a fazer a diferença" banner="foraDaCaixa"/>
+      <BannerInicial banner="embaixadoras">
+        <h1>Quem nos <strong>ajuda</strong><br></br>a fazer a<strong> diferença</strong></h1>
+      </BannerInicial>
 
       <div className="container">
 

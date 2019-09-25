@@ -1,4 +1,6 @@
 import React from 'react'
+import { BrowserRouter, Switch, Route, Link } from 'react-router-dom'; // Importando react router dom
+
 
 import './MenuExpandido.css'
 
@@ -7,11 +9,11 @@ const MenuExpandido = props => {
     return (
       <div className="MenuExpandido">
           <ul className="itensMenu">
-              <li><a href="/">Home</a></li>
-              <li><a href="/quem-somos">Quem Somos</a></li>
-              <li><a href="/embaixadoras">Embaixadoras</a></li>
-              <li><a href="/mentorias">Mentorias</a></li>
-              <li><a href="/contato">Contato</a></li>
+              <li><Link to ="/">Home</Link></li>
+              <li><Link to ="/quem-somos">Quem Somos</Link></li>
+              <li><Link to="/embaixadoras">Embaixadoras</Link></li>
+              <li><Link to="/mentorias">Mentorias</Link></li>
+              <li><Link to="/contato">Contato</Link></li>
           </ul>
       </div>
   )
