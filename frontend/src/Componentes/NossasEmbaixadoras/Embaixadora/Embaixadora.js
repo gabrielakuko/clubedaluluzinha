@@ -3,7 +3,6 @@ import React from 'react'
 // Importando componentes
 
 import './Embaixadora.css'
-import Button from '../../Button/Button'
 
 const Embaixadora = props => (
 
@@ -13,7 +12,7 @@ const Embaixadora = props => (
             <h4>{props.nomeEmbaixadora}</h4>
             <hr />
             <p className="detalheEmbaixadora"><strong> {props.cidadeEmbaixadora}</strong></p>
-            <Button color="secondary" text="Eventos" onClick={props.funcoes} />
+            {props.children}
           </div>
         </div>
 )

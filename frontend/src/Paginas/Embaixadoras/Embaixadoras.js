@@ -5,6 +5,10 @@ import Fran from '../../Assets/embaixadorafran.jpg'
 import Jani from '../../Assets/embaixadorajanidemenezes.jpg'
 import Renata from '../../Assets/embaixadorarenatabrasilia.jpg'
 import Greice from '../../Assets/embaixadoragreice.jpg'
+import Karine from '../../Assets/karine-graeff.jpg'
+import Janaina from '../../Assets/janaina-rosa.jpg'
+import Liana from '../../Assets/liana-de-brum.jpg'
+import Moara from '../../Assets/moara-rocha.jpg'
 
 // Importando componentes
 import Embaixadora from '../../Componentes/NossasEmbaixadoras/Embaixadora/Embaixadora'
@@ -15,6 +19,8 @@ import Rodape from '../../Componentes/Rodape/Rodape'
 import Popup from '../../Componentes/Popup/Popup'
 import Flickity from 'react-flickity-component'
 import ButtonLink from '../../Componentes/ButtonLink/ButtonLink'
+import Button from '../../Componentes/Button/Button'
+
 
 import "flickity/css/flickity.css";
 
@@ -26,10 +32,15 @@ import './Embaixadoras.css'
 const Embaixadoras = props => {
 
   const arrayEmbaixadoras = ([
-    { "id": 1, "imagem": Greice, "nome": "Greice Maria", "cidade": "Rio do Sul - SC" },
-    { "id": 2, "imagem": Fran, "nome": "Fran de Morais", "cidade": "Blumenau - SC" },
-    { "id": 3, "imagem": Renata, "nome": "Renata", "cidade": "Brasília - DF" },
-    { "id": 4, "imagem": Jani, "nome": "Jani de Menezes", "cidade": "Chapeço - SC" }
+    { "id": 1, "imagem": Greice, "nome": "Greice Philippi", "cidade": "Rio do Sul - SC", "possuiEvento": true },
+    { "id": 2, "imagem": Fran, "nome": "Fran de Morais", "cidade": "Blumenau - SC", "possuiEvento": true },
+    { "id": 3, "imagem": Renata, "nome": "Renata", "cidade": "Brasília - DF", "possuiEvento": true },
+    { "id": 4, "imagem": Jani, "nome": "Jani de Menezes", "cidade": "Chapeço - SC", "possuiEvento": true },
+    { "id": 5, "imagem": Karine, "nome": "Karine Graeff", "cidade": "Balneário Cambúriu - SC", "possuiEvento": false },
+    { "id": 6, "imagem": Janaina, "nome": "Janaina Rosa", "cidade": "Caixas do Sul - RS", "possuiEvento": false },
+    { "id": 7, "imagem": Liana, "nome": "Liana de Brum", "cidade": "São José - SC", "possuiEvento": false },
+    { "id": 8, "imagem": Moara, "nome": "Moara Rocha", "cidade": "Aracaju - SE", "possuiEvento": false }
+
   ]);
 
   const FlickityOptions = {
@@ -100,13 +111,22 @@ const Embaixadoras = props => {
         <div className="paginaEmbaixadoras">
 
           {arrayEmbaixadoras.map((embaixadora, index) => {
-            return (
-              <Embaixadora key={embaixadora.id} imagemEmbaixadora={embaixadora.imagem} descricaoImagem="Imagem da embaixadora Greice" nomeEmbaixadora={embaixadora.nome} cidadeEmbaixadora={embaixadora.cidade} idEmbaixadora={embaixadora.id}
-                funcoes={() => {
-                  setPopupState(true)
-                  setId(embaixadora.id)
-                }} />
-            )
+            if(embaixadora.possuiEvento) {
+              return (
+                <Embaixadora key={embaixadora.id} imagemEmbaixadora={embaixadora.imagem} descricaoImagem="Imagem da embaixadora Greice" nomeEmbaixadora={embaixadora.nome} cidadeEmbaixadora={embaixadora.cidade} idEmbaixadora={embaixadora.id}>
+                  <Button color="secondary" text="Eventos" onClick={() => {
+                    setPopupState(true)
+                    setId(embaixadora.id)
+                  }} />
+                </Embaixadora>
+              )
+            }
+            else {
+              return (
+                <Embaixadora key={embaixadora.id} imagemEmbaixadora={embaixadora.imagem} descricaoImagem="Imagem da embaixadora Greice" nomeEmbaixadora={embaixadora.nome} cidadeEmbaixadora={embaixadora.cidade} idEmbaixadora={embaixadora.id} />
+              )
+            }
+            
           })}
 
         </div>

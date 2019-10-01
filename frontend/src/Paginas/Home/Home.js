@@ -6,7 +6,7 @@ import './Home.css'
 import comoFunciona from '../../Assets/comofunciona.jpg'
 import escalarResultados from '../../Assets/escalarseusresultados.jpg'
 import Fran from '../../Assets/embaixadorafran.jpg'
-import Renata from '../../Assets/embaixadorarenatabrasilia.jpg'
+import Karine from '../../Assets/karine-graeff.jpg'
 import Greice from '../../Assets/embaixadoragreice.jpg'
 
 // Importando componentes
@@ -33,9 +33,9 @@ import ButtonLink from '../../Componentes/ButtonLink/ButtonLink'
 const Home = () => {
 
   const arrayEmbaixadoras = ([
-    { "id": 1, "imagem": Greice, "nome": "Greice Maria", "cidade": "Rio do Sul - SC" },
+    { "id": 1, "imagem": Greice, "nome": "Greice Philippi", "cidade": "Rio do Sul - SC" },
     { "id": 2, "imagem": Fran, "nome": "Fran de Morais", "cidade": "Blumenau - SC" },
-    { "id": 3, "imagem": Renata, "nome": "Renata", "cidade": "Brasília - DF" },
+    { "id": 3, "imagem": Karine, "nome": "Karine Graeff", "cidade": "Balneário Cambúriu - SC" },
   ]);
 
   const FlickityOptions = {
@@ -124,7 +124,7 @@ const Home = () => {
 
           </div>
           <div className="botoesEmbaixadoras">
-            <ButtonLink color="secondary" text="Nossas embaixadoras" path="/embaixadoras" tipo="link"/>
+            <ButtonLink color="secondary" text="Conheça nossas embaixadoras" path="/embaixadoras" tipo="link"/>
             <ButtonLink color="primary" text="Quer ser uma embaixadora?" path="/contato" tipo="link"/>
           </div>
 
