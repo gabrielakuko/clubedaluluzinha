@@ -132,9 +132,9 @@ const Home = () => {
       </div>
 
       <SecaoTextoImagemDireita titulo="Está buscando escalar seus resultados?" imagem={escalarResultados}>
-        <p><b>Quer se destacar no que faz?</b></p>
-        <p>Nossas mentorias são a melhor opção para quem deseja escalar seus resultados e ser provocado a sair da zona de conforto, em busca de melhores resultados.</p>
-        <p>É hora de mostrar para o mundo <b>toda a sua força!</b></p>
+        <p>Ministradas pelas founders Steffen’s e direcionadas para empresárias que buscam uma solução de rápida implementação, nossas mentorias irão lhe provocar a <b>sair da zona de conforto rumo a alta performance.</b></p>
+
+        <p>Cada uma delas é preparada com base na expertise delas que vieram do mundo corporativo por mais de 15 anos e já impactaram mais de <b>2000 mulheres</b> e impulsionaram negócios com mais de <b>300 empresas</b> do universo feminino. <b>Nossa meta é te levar ao próximo nivel!</b></p>
         <ButtonLink color="primary" text="Conheça nossas mentorias" tipo="link" path="/mentorias" />
       </SecaoTextoImagemDireita>
 
