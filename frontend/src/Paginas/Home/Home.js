@@ -14,9 +14,8 @@ import Menu from '../../Componentes/Menu/Menu'
 import BannerInicial from '../../Componentes/BannerInicial/BannerInicial'
 import SecaoTextoImagem from '../../Componentes/SecaoTextoImagem/SecaoTextoImagem'
 import SecaoTextoImagemDireita from '../../Componentes/SecaoTextoImagemDireita/SecaoTextoImagemDireita'
-import PlanosAssinatura from '../../Componentes/PlanosAssinatura/PlanosAssinatura'
+//import PlanosAssinatura from '../../Componentes/PlanosAssinatura/PlanosAssinatura'
 import Embaixadora from '../../Componentes/NossasEmbaixadoras/Embaixadora/Embaixadora'
-import Newsletter from '../../Componentes/Newsletter/Newsletter'
 import Rodape from '../../Componentes/Rodape/Rodape'
 import SecaoTime from '../../Componentes/SecaoTime/SecaoTime'
 import Popup from '../../Componentes/Popup/Popup'
@@ -26,7 +25,7 @@ import "flickity/css/flickity.css"
 
 // Importando Data
 import Eventos from '../../Data/Eventos.json'
-import Button from '../../Componentes/Button/Button'
+//import Button from '../../Componentes/Button/Button'
 import ButtonLink from '../../Componentes/ButtonLink/ButtonLink'
 
 
@@ -35,7 +34,7 @@ const Home = () => {
   const arrayEmbaixadoras = ([
     { "id": 1, "imagem": Greice, "nome": "Greice Philippi", "cidade": "Rio do Sul - SC" },
     { "id": 2, "imagem": Fran, "nome": "Fran de Morais", "cidade": "Blumenau - SC" },
-    { "id": 3, "imagem": Karine, "nome": "Karine Graeff", "cidade": "Balneário Cambúriu - SC" },
+    { "id": 3, "imagem": Karine, "nome": "Karine Graeff", "cidade": "Balneário Camburiú - SC" },
   ]);
 
   const FlickityOptions = {
@@ -94,7 +93,8 @@ const Home = () => {
         <p>Mas em ambos, através do empresariado que <strong>quer fazer acontecer!</strong></p>
       </SecaoTextoImagem>
 
-      <PlanosAssinatura />
+      {/* Planos de Assinatura desativados */}
+      {/* <PlanosAssinatura /> */}
 
       <div className="nossasEmbaixadoras">
         {popupAberto}
@@ -134,13 +134,12 @@ const Home = () => {
       <SecaoTextoImagemDireita titulo="Está buscando escalar seus resultados?" imagem={escalarResultados}>
         <p>Ministradas pelas founders Steffen’s e direcionadas para empresárias que buscam uma solução de rápida implementação, nossas mentorias irão lhe provocar a <b>sair da zona de conforto rumo a alta performance.</b></p>
 
-        <p>Cada uma delas é preparada com base na expertise delas que vieram do mundo corporativo por mais de 15 anos e já impactaram mais de <b>2000 mulheres</b> e impulsionaram negócios com mais de <b>300 empresas</b> do universo feminino. <b>Nossa meta é te levar ao próximo nivel!</b></p>
+        <p>Cada uma delas é preparada com base na expertise delas que vieram do mundo corporativo por mais de 15 anos e já impactaram mais de <b>2000 mulheres</b> e impulsionaram negócios com mais de <b>300 empresas</b> do universo feminino. <b>Nossa meta é te levar ao próximo nível!</b></p>
         <ButtonLink color="primary" text="Conheça nossas mentorias" tipo="link" path="/mentorias" />
       </SecaoTextoImagemDireita>
 
       <SecaoTime />
 
-      <Newsletter />
       <Rodape />
 
 
