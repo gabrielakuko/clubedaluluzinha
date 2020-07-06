@@ -3,34 +3,25 @@
     "idEmbaixadora": 1,
     "idEvento": 1,
     "nomeEmbaixadora": "Greice Maria",
-    "dataEvento": "20/11",
-    "nomeEvento": "1º Café de Negócios - Chapecó",
+    "dataEvento": "13/11",
+    "nomeEvento": "1º Café de Negócios - Rio do Sul",
     "resumoEvento": "Vem curtir essa experiencia junto com a gente! Para mais informações sobre o evento clique no botão a baixo. Estamos te esperando!",
-    "linkEvento": "https://www.sympla.com.br/1o-cafe-de-negocios---chapeco__633591"
+    "linkEvento": "https://www.sympla.com.br/1o-cafe-de-negocios-rio-do-sul__633839"
   },
   {
     "idEmbaixadora": 1,
     "idEvento": 2,
     "nomeEmbaixadora": "Greice Maria",
-    "dataEvento": "30/10",
-    "nomeEvento": "Workshop Viva esta experiência",
+    "dataEvento": "11/12",
+    "nomeEvento": "2º Café de Negócios - Rio do Sul",
     "resumoEvento": "Vem curtir essa experiencia junto com a gente! Para mais informações sobre o evento clique no botão a baixo. Estamos te esperando!",
-    "linkEvento": "https://www.sympla.com.br/workshop-viva-esta-experiencia-chapeco__633537"
-  },
-  {
-    "idEmbaixadora": 1,
-    "idEvento": 3,
-    "nomeEmbaixadora": "Greice Maria",
-    "dataEvento": "18/12",
-    "nomeEvento": "2º Café de Negócios - Chapecó",
-    "resumoEvento": "Vem curtir essa experiencia junto com a gente! Para mais informações sobre o evento clique no botão a baixo. Estamos te esperando!",
-    "linkEvento": "https://www.sympla.com.br/2o-cafe-de-negocios---chapeco__633606"
+    "linkEvento": "https://www.sympla.com.br/2o-cafe-de-negocios-rio-do-sul__633846"
   },
   {
     "idEmbaixadora": 2,
     "idEvento": 1,
     "nomeEmbaixadora": "Fran de Morais",
-    "dataEvento": "24/10",
+    "dataEvento": "06/11",
     "nomeEvento": "Workshop Viva esta experiência - Blumenau",
     "resumoEvento": "O Workshop Viva esta Experiência irá alimentar sua mente com conteúdo de qualidade entregue por profissionais selecionados a dedo para te agregar e fazer este dia não passar batido!",
     "linkEvento": "https://www.sympla.com.br/workshop-viva-esta-experiencia---blumenau__633785"
@@ -115,6 +106,15 @@
     "nomeEvento": "2º Café de Negócios - Chapecó",
     "resumoEvento": "O café de negócios é um momento mensal que o Clube proporciona as empresárias da cidade para ampliarem seu network e construírem relações de negócios sólidas, com parcerias de valor e conexões de interesse mútuo, sempre trilhando uma trilha de conhecimento mensal.",
     "linkEvento": "https://www.sympla.com.br/2o-cafe-de-negocios---chapeco__633606"
+  },
+  {
+    "idEmbaixadora": 5,
+    "idEvento": 1,
+    "nomeEmbaixadora": "Karine Graeff",
+    "dataEvento": "23/10",
+    "nomeEvento": "1º Café de Negócios - Balneário Camburiú",
+    "resumoEvento": "O café de negócios é um momento mensal que o Clube proporciona as empresárias da cidade para ampliarem seu network e construírem relações de negócios sólidas, com parcerias de valor e conexões de interesse mútuo, sempre trilhando uma trilha de conhecimento mensal.",
+    "linkEvento": "https://www.sympla.com.br/1o-cafe-de-negocios---balneario-camboriu__682518"
   }
   
 ]

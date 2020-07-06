@@ -1,4 +1,7 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { withRouter } from 'react-router'
+
 import './Mentorias.css'
 
 import imagemTrilha from '../../Assets/trilhaconhecimento.jpg'
@@ -23,7 +26,7 @@ const Mentorias = () => {
   const arrayMentorias = ([
     {"id": 1, "nome": "Mentoria Delas", "resumo": "Você vai ser provocado a repensar seus processos, suas metas e como atingir objetivos comerciais práticos.", "imagem": mentoriaDelas},
     {"id": 2, "nome": "Consultoria Empresarial", "resumo": "Vamos te ajudar a reorganizar a sua empresa e seus objetivos estratégicos.", "imagem": consultoriaEmpresarial},
-    {"id": 3, "nome": "Trilha do conhecimento", "resumo": "amos te provocar a pensar sob 3 pilares:  corpo, mente e espírito.", "imagem": imagemTrilha},
+    {"id": 3, "nome": "Trilha do conhecimento", "resumo": "Vamos te provocar a pensar sob 3 pilares:  corpo, mente e espírito.", "imagem": imagemTrilha},
   ]);
 
   const [abrirPopup, setPopupState] = useState(false)
@@ -43,7 +46,7 @@ const Mentorias = () => {
                         {/* <img src={itemMentoria.imagem} /> */}
                         <h4>{mentoria.nomeMentoria}</h4>
                         <p>{mentoria.resumoMentoria}</p>
-                        <ButtonLink color="secondary" path="/contato" text="Se Inscreva" />
+                        <Link to={{ pathname: '/contato', assunto: mentoria.nomeMentoria}} className="botaoAgenda">Inscreva-se</Link>
                       </div>
                     </div>
                   )
@@ -95,4 +98,4 @@ const Mentorias = () => {
   );
 }
 
-export default Mentorias
+export default withRouter(Mentorias)

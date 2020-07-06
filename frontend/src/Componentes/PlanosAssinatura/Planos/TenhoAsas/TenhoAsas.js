@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import tenhoasasimagem from '../../../../Assets/tenhoasas.jpg'
 
@@ -46,8 +47,8 @@ const TenhoAsas = props => (
         </div>
         
         <div className="areaBotoesPlano">
-          <Button color="secondary" text="Assinar 6 meses" path="http://pag.ae/7VhoyakEq"/>
-          <Button color="secondary" text="Assinar 12 meses" path="http://pag.ae/7VhoBs6g5"/>
+          <Link to={{ pathname: '/contato', link: 'http://pag.ae/7VhoyakEq', assunto: `Assinar Tenho Asas 6 meses`}} className="botaoAssinatura">Assinar 6 meses</Link>
+          <Link to={{ pathname: '/contato', link: 'http://pag.ae/7VhoBs6g5', assunto: `Assinar Tenho Asas 12 meses`}} className="botaoAssinatura">Assinar 12 meses</Link>
         </div>
         
       </SecaoTextoImagem>

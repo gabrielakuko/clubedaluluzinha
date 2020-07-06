@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import maisbusinessimagem from '../../../../Assets/maisbusiness.jpg'
 
@@ -26,16 +27,16 @@ const MaisBusiness = props => (
 
         <p>Aqui você terá:</p>
         <ul className="listaDonaTempo">
-          <li>Conteúdo Mensal via email com uma Jornada de Conhecimento;</li>
+          <li>Conteúdo Mensal via e-mail com uma Jornada de Conhecimento;</li>
           <li>Acesso a 1 café de negócio/mês</li>
           <li>Acesso ao grupo fechado de whatsapp, na sua cidade!</li>
           <li>Vai gerar conexões verdadeiras e de longo prazo</li>
           <li>Receberá uma trilha do conhecimento  através de uma série de 15 vídeos passando por 3 áreas da vida que irão te provocar!!</li>
           <li>Repost de seus Stories (seus produtos) pela embaixadora do Clube da Luluzinha.</li>
           <li>Desconto 20% em mentorias e consultorias</li>
-          <li>Seu logo no Site do Clube  (aqui deixaria)</li>
+          <li>Seu logo no Site do Clube</li>
           <li>No Plano de 08 meses = Ganha espaço em 1 workshop e 50% nos próximos 2, para colocar a vivencia da sua empresa</li>
-          <li>No Plano de 12 meses = Ganha espaço em 3 workshop para colocar a vivencia da sua empresa</li>
+          <li>No Plano de 12 meses = Ganha espaço em 3 workshop para colocar a vivência da sua empresa</li>
           <li>30 minutos de palco para palestrar em 1 café de negócios (benefício limitado)</li>
           <li>10 min de palco para falar em um dos workshops que faremos na sua cidade. (benefício limitado)</li>
         </ul><br></br>
@@ -47,8 +48,8 @@ const MaisBusiness = props => (
         </div>
         
         <div className="areaBotoesPlano">
-          <Button color="secondary" text="Assinar 6 meses" path="http://pag.ae/7VhoDb77H"/>
-          <Button color="secondary" text="Assinar 12 meses" path="http://pag.ae/7VhoEkpnN"/>
+          <Link to={{ pathname: '/contato', link: 'http://pag.ae/7VhoDb77H', assunto: `Assinar Mais Business 6 meses`}} className="botaoAssinatura">Assinar 6 meses</Link>
+          <Link to={{ pathname: '/contato', link: 'ttp://pag.ae/7VhoEkpnN', assunto: `Assinar Mais Business 12 meses`}} className="botaoAssinatura">Assinar 12 meses</Link>
         </div>
       </SecaoTextoImagem>
     </div>

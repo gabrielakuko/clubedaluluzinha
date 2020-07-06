@@ -5,14 +5,29 @@
 .formasAssinatura {
   margin-bottom: 20px;
 }
-
-.formasAssinatura p{
+.formasAssinatura p {
   margin: 0;
   font-size: 14px;
   padding: 0;
   line-height: 1em;
-  color: 
+  color: #363636;
 } 
+.botaoAssinatura {
+  background: #823DC3;
+  color: white;
+  font-weight: bold;
+  padding: 8px 30px;
+  border: 1px solid #823DC3;
+  border-radius: 5px;
+  font-size: 16px;
+  text-decoration: none;
+  text-align: center;
+}
+.botaoAssinatura:hover {
+  background: #54198B;
+  cursor: pointer;
+  border-color: #54198B;
+}
 @media screen and (max-width: 700px) {
   .dosesinsight .imagemSecaoTextoImagemEsquerda {
     margin-top: 20px;

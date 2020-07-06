@@ -5,7 +5,7 @@ import './QuemSomos.css'
 import quemSomos1 from '../../Assets/imagemQuemSomos1.jpg'
 import quemSomos2 from '../../Assets/imagemQuemSomos2.jpg'
 import quemSomos3 from '../../Assets/mentoriadelas.jpg'
-
+import video from '../../Videos/quem-somos.mp4'
 // Importando componentes
 import Menu from '../../Componentes/Menu/Menu'
 import BannerInicial from '../../Componentes/BannerInicial/BannerInicial'
@@ -13,6 +13,7 @@ import SecaoTextoImagem from '../../Componentes/SecaoTextoImagem/SecaoTextoImage
 import SecaoTextoImagemDireita from '../../Componentes/SecaoTextoImagemDireita/SecaoTextoImagemDireita'
 import Newsletter from '../../Componentes/Newsletter/Newsletter'
 import Rodape from '../../Componentes/Rodape/Rodape'
+import SecaoTextoVideo from '../../Componentes/SecaoTextoVideo/SecaoTextoVideo'
 
 
 function QuemSomos() {
@@ -24,13 +25,13 @@ function QuemSomos() {
         <h1>Conheça nossa <strong>história</strong><br></br>e nosso<strong> compromisso</strong></h1>
       </BannerInicial>
 
-      <SecaoTextoImagem titulo="Nossa Motivação" imagem={quemSomos3}>
+      <SecaoTextoVideo titulo="Nossa Motivação" linkVideo={video}>
         <p>Uma empresa que nasceu com propósito firme: <strong>Gerar e impulsionar negócios com mulheres e entre elas!</strong></p>
 
-        <p>Para fazer isso acontecer, passamos por poucas e boas nos últimos tempos. Foram muitas turbulências para nós.  E é provável que o motivo seja o mesmo que está provocando turbulências em possivelmente 100% das empresas:<strong> a necessidade de mudar, se adaptar, de evoluir.</strong>Em épocas exponenciais, as barreiras territoriais não fazem mais sentido. O mais do mesmo não cabe mais.</p>
+        <p>Para fazer isso acontecer, passamos por poucas e boas nos últimos tempos. Foram muitas turbulências para nós.  E é provável que o motivo seja o mesmo que está provocando turbulências em possivelmente 100% das empresas:<strong> a necessidade de mudar, se adaptar, de evoluir. </strong>Em épocas exponenciais, as barreiras territoriais não fazem mais sentido. O mais do mesmo não cabe mais.</p>
 
         <p>Nesse processo, nós vivemos na pele o que sempre falamos em mentorias, <strong>a transformação é desconfortável, mas necessária.</strong></p>
-      </SecaoTextoImagem>
+      </SecaoTextoVideo>
 
       <SecaoTextoImagemDireita titulo="Focadas no empreendendorismo feminino" imagem={quemSomos2}>
         <p>Nosso compromisso inegociável com o crescimento do empreendedorismo feminino está explicitamente impresso no que temos de mais valioso: o nosso propósito.  Por ele a gente sai da zona de conforto, faz e acontece!</p>

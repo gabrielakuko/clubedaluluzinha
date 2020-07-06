@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+
 
 // Importando Imagens
 import Fran from '../../Assets/embaixadorafran.jpg'
@@ -36,7 +38,7 @@ const Embaixadoras = props => {
     { "id": 2, "imagem": Fran, "nome": "Fran de Morais", "cidade": "Blumenau - SC", "possuiEvento": true },
     { "id": 3, "imagem": Renata, "nome": "Renata", "cidade": "Brasília - DF", "possuiEvento": true },
     { "id": 4, "imagem": Jani, "nome": "Jani de Menezes", "cidade": "Chapeço - SC", "possuiEvento": true },
-    { "id": 5, "imagem": Karine, "nome": "Karine Graeff", "cidade": "Balneário Cambúriu - SC", "possuiEvento": false },
+    { "id": 5, "imagem": Karine, "nome": "Karine Graeff", "cidade": "Balneário Camburiú - SC", "possuiEvento": true },
     { "id": 6, "imagem": Janaina, "nome": "Janaina Rosa", "cidade": "Caixas do Sul - RS", "possuiEvento": false },
     { "id": 7, "imagem": Liana, "nome": "Liana de Brum", "cidade": "São José - SC", "possuiEvento": false },
     { "id": 8, "imagem": Moara, "nome": "Moara Rocha", "cidade": "Aracaju - SE", "possuiEvento": false }
@@ -73,7 +75,7 @@ const Embaixadoras = props => {
                     <div className="itemAgenda">
                       <h4>{detalheEvento.dataEvento} - {detalheEvento.nomeEvento}</h4>
                       <p>{detalheEvento.resumoEvento}</p>
-                      <a href={detalheEvento.linkEvento} className="botaoAgenda">Inscreva-se</a>
+                      <Link to={{ pathname: '/contato', assunto: `${detalheEvento.dataEvento} - ${detalheEvento.nomeEvento}`, link: detalheEvento.linkEvento, embaixadora: detalheEvento.nomeEmbaixadora}} className="botaoAgenda" onClick={document.body.classList.remove("no-scroll")}>Inscreva-se</Link>
                     </div>
                   </div>
                 )

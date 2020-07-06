@@ -3,12 +3,12 @@ import React from 'react'
 import './Popup.css'
 
 const Popup = (props) => {
+  // document.body.classList.add("no-scroll");
+
   const closePopup = () => {
-    document.body.classList.remove("no-scroll");
+    // document.body.classList.remove("no-scroll");
     return props.fecharPopup();
   };
-
-  document.body.classList.add("no-scroll");
   return (
     <div className="popup">
       <div className="fundoPopup">

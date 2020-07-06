@@ -14,10 +14,10 @@ import MaisBusiness from './Componentes/PlanosAssinatura/Planos/MaisBusiness/Mai
 import TenhoAsas from './Componentes/PlanosAssinatura/Planos/TenhoAsas/TenhoAsas';
 
 import * as serviceWorker from './serviceWorker';
-import { BrowserRouter, Switch, Route } from 'react-router-dom'; // Importando react router dom
+import { BrowserRouter, HashRouter, Switch, Route } from 'react-router-dom'; // Importando react router dom
 
 ReactDOM.render(
-    <BrowserRouter>
+    <HashRouter>
         <Switch>
             <Route path="/" exact={true} component={Home} />
             <Route path="/embaixadoras" component={Embaixadoras} />
@@ -29,7 +29,7 @@ ReactDOM.render(
             <Route path="/planos/tenhoasas" component={TenhoAsas} />
             <Route path="/planos/maisbusiness" component={MaisBusiness} />
         </Switch>
-    </BrowserRouter>
+    </HashRouter>
     , document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import dosesinsightimagem from '../../../../Assets/dosesinsight2.jpg'
 
@@ -29,8 +30,7 @@ const DosesInsight = props => (
           <p>FORMAS DE ASSINATURA:</p>
           <p>Plano C: 12 meses (12 x de R$ 19,90)</p>
         </div>
-        
-        <Button text="Quero Assinar" path="http://pag.ae/7VdvYx715" color="primary"/>
+        <Link to={{ pathname: '/contato', link: 'http://pag.ae/7VdvYx715', assunto: `Assinar Doses de Insight`}} className="botaoAssinatura">Quero Assinar</Link>
       </SecaoTextoImagem>
     </div>
   </div>

@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
 
 import donatempoimagem from '../../../../Assets/donadotempo2.jpg'
 
@@ -22,7 +24,7 @@ const DonaTempo = props => (
 
     <div className="container">
       <SecaoTextoImagem titulo="Como Funciona?" imagem={donatempoimagem}>
-        <p>Vivemos em um oceano de informações, em tempos líquidos, onde nada foi feito para durar, como já dizia Zigmunt Bauman. Nesse mar agitado, como vc tem remado o seu barco para construir conexões de valor?</p>
+        <p>Vivemos em um oceano de informações, em tempos líquidos, onde nada foi feito para durar, como já dizia Zigmunt Bauman. Nesse mar agitado, como você tem remado o seu barco para construir conexões de valor?</p>
 
         <p>Aqui você terá:</p>
         <ul className="listaDonaTempo">
@@ -39,8 +41,8 @@ const DonaTempo = props => (
         </div>
         
         <div className="areaBotoesPlano">
-          <Button color="secondary" text="Assinar 6 meses" path="http://pag.ae/7Vhe64r-r"/>
-          <Button color="secondary" text="Assinar 12 meses" path="http://pag.ae/7VhovR74r"/>
+          <Link to={{ pathname: '/contato', link: 'http://pag.ae/7Vhe64r-r', assunto: `Assinar Dona do Tempo 6 meses`}} className="botaoAssinatura">Assinar 6 meses</Link>
+          <Link to={{ pathname: '/contato', link: 'http://pag.ae/7VhovR74r', assunto: `Assinar Dona do Tempo 12 meses`}} className="botaoAssinatura">Assinar 12 meses</Link>
         </div>
         
       </SecaoTextoImagem>

@@ -1,33 +1,78 @@
-const express = require('express')
-// const mongoose = require('mongoose')
-const path = require("path")
-const cors = require('cors')
+const app = require('express');
+const port = process.env.PORT || 3000;
+const cors = require('cors');
+const path = require("path");
+const bodyParser = require('body-parser');
+const mailer = require('nodemailer');
 
-// const EmailController = require('./controllers/EmailController')
+const config = { 
+  host: "smtp.kinghost.net",
+  port: 587,
+  auth: {
+    user: "contato@clubdaluluzinha.com.br",
+    pass: "luluzinha@email"
+  }
+}
 
-
-// mongoose.set('useNewUrlParser', true)
-// mongoose.set('useFindAndModify', false)
-// mongoose.set('useCreateIndex', true)
-// mongoose.set('useUnifiedTopology', true)
-
-// mongoose.connect('mongodb://kamino.mongodb.umbler.com:44677/luluzinha')
-
-// var db = mongoose.connection
-// db.on('error', console.error.bind(console, 'connection error'))
-// db.once('open', () => {
-//   console.log('conectou');
-// })
-
-const server = express()
-const port = process.env.PORT || 21096
-
-server.use(express.static(__dirname))
-server.use(express.static(path.join(__dirname, './frontend/build')))
+const server = app()
 
 server.use(cors())
-// Informa para o express que vai ser usado JSON
-server.use(express.json())
+
+server.use(app.static(__dirname));
+server.use(app.static(path.join(__dirname, './frontend/build')));
+
+const transporter = mailer.createTransport(config);
+
+server.use(bodyParser.json());
+
+server.post('/send-mail', (req, res) => {
+  console.log('req.body: ', req.body);
+  const message = {
+    from: config.auth.user,
+    to: config.auth.user,
+    subject: req.body.assunto,
+    text: req.body.mensagem,
+    html: `
+      <style>
+        .fundo {
+          background: #823DC3;
+          width: 100%;
+          height: 100%;
+          padding: 50px;
+        }
+        .area-email {
+          background: white;
+          width: 80%;
+          height: 80%;
+          border: 1px solid white;
+          border-radius: 15px;
+          padding: 20px;
+          text-align: center;
+          font-family: sans-serif;
+        }
+        .titulo {
+          text-align: center;
+        }
+      </style>
+      <div class="fundo">
+        <div class="area-email">
+          <h1 class="titulo">${req.body.assunto}</h1>
+          <b>nome: </b>${req.body.nome} <br>
+          <b>telefone: </b>${req.body.telefone}<br>
+          <b>email: </b>${req.body.email}<br>
+        </div>
+      </div>
+      
+    `
+  }
+
+  transporter.sendMail(message, (error, info) => {
+    if (error) {
+      res.status(400).send('Falhou!');
+    }
+    res.status(200).send('Enviado!');
+  })
+});
 
 server.get('/', (req, res) => {
   res.send('Hello')
@@ -36,14 +81,8 @@ server.get('/', (req, res) => {
       res.status(500).send(err)
     }
   })
-  // const teste = path.join(__dirname, "frontend/build") 
 })
-server.post('/email', (req, res) => {
-  console.log(req.body)
-})
-
-// server.get('/email', EmailController.store)
 
 server.listen(port, () => {
-  console.log('servidor rodando');
-})
+  console.log(`listening on port: ${port}`)
+});
