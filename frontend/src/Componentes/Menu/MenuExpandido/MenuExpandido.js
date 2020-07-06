@@ -11,7 +11,12 @@ const MenuExpandido = (props) => {
               <li><Link to="/">Home</Link></li>
               <li><Link to="/quem-somos">Quem Somos</Link></li>
               <li><Link to="/embaixadoras">Embaixadoras</Link></li>
-              <li><Link to="/mentorias">Mentorias</Link></li>
+              <li><Link to="/time-mentoras">Time de Mentoras</Link></li>
+              <li><Link to="/mentorias-clube">Mentorias Clube</Link></li>
+              <li><Link to="/workshops">Workshops</Link></li>
+              <li><Link to="/lulu-talks">Lulu Talks</Link></li>
+              <li><Link to="/parceiros-clube">Parceiros Clube</Link></li>
+              <li><Link to="/respeitaminhahistsoria">#Respeitaminhahistória</Link></li>
               <li><Link to="/contato">Contato</Link></li>
           </ul>
       </div>
