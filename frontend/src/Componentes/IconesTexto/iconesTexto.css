@@ -1,0 +1,31 @@
+.iconeTextoWorkshop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #54198B;
+  border: 1px solid #54198B;
+  border-radius: 10px;
+  padding: 20px;
+  min-height: 250px;
+}
+.iconeTextoWorkshop img {
+  width: auto;
+  max-width: 130px;
+  height: 100%;
+  max-height: 100px;
+}
+.iconeTextoWorkshop .tituloIcone {
+  font-weight: 800;
+  font-size: 40px;
+  margin: 0;
+  margin-top: 10px;
+  color: white;
+  padding: 0 10px;
+  border-radius: 6px;
+}
+.iconeTextoWorkshop .descricaoIcone {
+  font-size: 20px;
+  padding: 0;
+  margin: 0;
+}

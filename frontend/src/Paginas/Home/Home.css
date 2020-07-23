@@ -1,17 +1,58 @@
 @import '../Embaixadoras/Embaixadoras.css';
 
 .areaEmbaixadoras {
+  max-width: 100%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(6, 1fr); 
   grid-gap: 10px;
 }
-.botoesEmbaixadoras {
+.areaEmbaixadoras .embaixadora .textoEmbaixadoras {
+  display: none;
+}
+.areaEmbaixadoras .embaixadora {
+  display: block;
+  height: auto!important;
+}
+.areaEmbaixadoras .embaixadora .imagemEmbaixadoras {
+  width: auto!important;
+  max-width: 100%;
+  height: auto!important;
+  margin-right: none!important;
+}
+.areaEmbaixadoras .embaixadora hr {
+  display: none!important;
+}
+.botoesHomeColunas {
   margin-top: 20px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  justify-content: space-around;
   grid-gap: 10px;
   align-items: center;
 }
+.botoesHomeColunas#botoesEmbaixadoras a {
+  width: 100%;
+}
+.impactosWorkshop {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  align-items: center;
+}
+.homeWorkshops{
+  background-color: #823DC3;
+  color: white;
+}
+.tiposWorkshop {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 20px;
+}
+.tiposWorkshop p {
+  font-weight: 700;
+  color: white;
+}
+
 @media screen and (max-width: 700px)
  {
   .botoesEmbaixadoras {

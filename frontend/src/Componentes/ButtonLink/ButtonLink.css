@@ -1,35 +1,60 @@
-.secondary {
-  background: transparent;
-  color: #823DC3;
+.secondary, .secondaryDark {
+  border: 1px solid;
   font-weight: bold;
   padding: 8px 30px;
-  border: 2px solid #823DC3;
   border-radius: 5px;
   font-size: 16px;
   text-decoration: none;
   text-align: center;
 }
-
+.secondary {
+  background: transparent;
+  color: #823DC3;
+  border-color:#823DC3;
+}
 .secondary:hover {
   background: #823DC3;
   color: white;
   cursor: pointer;
 }
-
-.primary {
-  background: #823DC3;
+.secondaryDark {
+  background: transparent;
+  border-color:white;
   color: white;
+}
+.secondaryDark:hover {
+  background: white;
+  color: #823DC3;
+  cursor: pointer;
+}
+.primary, .primaryDark {
   font-weight: bold;
   padding: 8px 30px;
-  border: 1px solid #823DC3;
   border-radius: 5px;
   font-size: 16px;
   text-decoration: none;
   text-align: center;
 }
+.primary {
+  background: #823DC3;
+  color: white;
+  border: 1px solid #823DC3;
+}
 
 .primary:hover {
   background: #54198B;
   cursor: pointer;
+  border-color: #54198B;
+}
+
+.primaryDark {
+  background: white;
+  color: #823DC3;
+  border: 1px solid white;
+}
+.primaryDark:hover {
+  background: #54198B;
+  cursor: pointer;
+  color: white;
   border-color: #54198B;
 }

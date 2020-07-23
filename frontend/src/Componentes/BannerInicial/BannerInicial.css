@@ -24,7 +24,11 @@
   font-style: normal;
   font-size: 35px;
 }
-
+#bannerHome {
+  background: url('../../Assets/banner-home.jpg') center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 #foraDaCaixa {
   background: url('../../Assets/banner1.png') center center;
   background-repeat: no-repeat;

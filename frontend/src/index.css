@@ -33,6 +33,11 @@ h2 {
   padding: 0;
   text-align: center;
 }
+h3, h4, h5, h6 {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
 b {
   font-family: realist, sans-serif;
   font-weight: 700;
