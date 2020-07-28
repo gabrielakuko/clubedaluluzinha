@@ -17,6 +17,15 @@ import Group from '../../Assets/Icones/group.png'
 import Data from '../../Assets/Icones/data.png'
 import Globo from '../../Assets/Icones/globo.png'
 
+// Importando imagens parceiros
+import Labra from '../../Assets/Parceiros/labra.png'
+
+// Importando imagens depoimentos
+import Elisa from '../../Assets/Depoimentos/elisa.jpg'
+import FranDepo from '../../Assets/Depoimentos/fran.jpg'
+import LuizaChai from '../../Assets/Depoimentos/luiza-chai.jpg'
+import Gi from '../../Assets/Depoimentos/gi.jpg'
+
 // Importando componentes
 import Menu from '../../Componentes/Menu/Menu'
 import BannerInicial from '../../Componentes/BannerInicial/BannerInicial'
@@ -28,6 +37,8 @@ import Rodape from '../../Componentes/Rodape/Rodape'
 import SecaoTime from '../../Componentes/SecaoTime/SecaoTime'
 import Popup from '../../Componentes/Popup/Popup'
 import Icone from '../../Componentes/IconesTexto/iconesTexto'
+import IconeParceiro from '../../Componentes/IconesParceiros/iconesParceiros'
+import Depoimentos from '../../Componentes/Depoimentos/depoimentos'
 import Flickity from 'react-flickity-component'
 import "flickity/css/flickity.css"
 
@@ -188,16 +199,56 @@ const Home = () => {
 
       <div className="parceirosClube container">
         <h2>Parceiros Clube da Luluzinha</h2>
-        <h4>Conectar empresas e soluções faz parte de nosso dna</h4>
+        <h3>Conectar empresas e soluções faz parte de nosso dna</h3>
 
         <p>Para o Clube da Luluzinha, empresa parceira deve ser aquela capaz de complementar negócios a agregar valor.  Por isso temos orgulho em tê-las conosco e te dizer que cada uma tem um trabalho de alta competência que a gente utiliza, curte e indica.</p>
 
         <p>Quando a gente diz que é power, é power mesmo!</p>
 
         <p>Conheça as empresas parceiras que somam junto a nós e que merecem uma espiadinha sua:</p>
-        
-      </div>
 
+        <div className="parceiros">
+          <IconeParceiro imagemParceiro={Labra} altParceiro="Logo Labra" />
+          <IconeParceiro imagemParceiro={Labra} altParceiro="Logo Labra" />
+          <IconeParceiro imagemParceiro={Labra} altParceiro="Logo Labra" />
+          <IconeParceiro imagemParceiro={Labra} altParceiro="Logo Labra" />
+          <IconeParceiro imagemParceiro={Labra} altParceiro="Logo Labra" />
+        </div>
+
+      </div>
+      <div className="depoimentosClientes">
+        <h2>O discurso empolga, mas o exemplo arrasta!</h2>
+        <div className="container">
+          <Depoimentos 
+          imagemDepoimento={Elisa} 
+          nomeEmpresa="Perfumes & Aromas" 
+          depoimento="“Foi surpreendente. Elas me mostraram como gerar resultados com simplicidade.  
+          Acho que funciona pq elas entendem as dificuldades que nós mulheres passamos para crescer no mundo dos negócios”"
+          instagram1="@elisamariaparfum" linkInstagram1="https://www.instagram.com/elisamariaparfum/"
+          instagram2="@adivinaessencia" linkInstagram1="https://www.instagram.com/adivinaessencia/"/>
+
+          <Depoimentos 
+          imagemDepoimento={FranDepo} 
+          nomeEmpresa="Registro de Marcas" 
+          depoimento="“Elas me mostraram como gerar negócios saindo da zona de conforto, através do network para business.  Fechei novos negócios, firmei parcerias e comecei a perceber o potencial que faltava explorar. Elas me estimulam a escalar resultados o tempo todo, não me vejo mais longe do Clube”"
+          linkInstagram1="https://www.instagram.com/franmanfredi/" instagram1="@franmanfredi"
+          linkInstagram2="https://www.instagram.com/primeiromundobr/" instagram2="@primeiromundobr"/>
+
+          <Depoimentos 
+          imagemDepoimento={LuizaChai} 
+          nomeEmpresa="Beleza & Bem estar" 
+          depoimento="“Foi transformador para os nossos resultados. Elas nos deram mais coragem e norte para agir.  É quase impossível não ter progresso”"
+          linkInstagram1="https://www.instagram.com/luiza.mariacunha/" instagram1="@luiza.mariacunha"
+          linkInstagram2="https://www.instagram.com/chaiwessner/" instagram2="@chaiwessner"/>
+
+          <Depoimentos 
+          imagemDepoimento={Gi} 
+          nomeEmpresa="Cuidados Domiciliares" 
+          depoimento="“Foi incrível pq elas conseguem explicar o que fazer de maneira muito simples e com atividades práticas pra gente implementar no negócio. Não é daquelas que colocam situações impossíveis de aplicar na nossa realidade. Isso fez toda diferença para o meu rendimento”"
+          linkInstagram1="https://www.instagram.com/gicuidadodomiciliar/"
+          instagram1="gicuidadodomiciliar"/>
+        </div>
+      </div>
       <Rodape />
 
 
