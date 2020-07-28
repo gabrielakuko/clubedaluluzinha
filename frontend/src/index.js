@@ -8,6 +8,15 @@ import Mentorias from './Paginas/Mentorias/Mentorias';
 import QuemSomos from './Paginas/QuemSomos/QuemSomos';
 import Contato from './Paginas/Contato/Contato';
 
+// Importando Embaixadoras
+import Greice from './Paginas/Embaixadoras/greiceEmbaixadora/greiceEmbaixadora';
+import Jani from './Paginas/Embaixadoras/JaniMenezes/JaniMenezes';
+import Anne from './Paginas/Embaixadoras/AnneCosta/AnneCosta';
+import Karine from './Paginas/Embaixadoras/KarineGraeff/KarineGraeff';
+import Charlene from './Paginas/Embaixadoras/CharleneMoraes/CharleneMoraes';
+import Monica from './Paginas/Embaixadoras/MonicaNogueira/MonicaNogueira';
+
+
 import DosesInsight from './Componentes/PlanosAssinatura/Planos/DosesInsight/DosesInsight';
 import DonaTempo from './Componentes/PlanosAssinatura/Planos/DonaTempo/DonaTempo';
 import MaisBusiness from './Componentes/PlanosAssinatura/Planos/MaisBusiness/MaisBusiness';
@@ -20,7 +29,13 @@ ReactDOM.render(
     <HashRouter>
         <Switch>
             <Route path="/" exact={true} component={Home} />
-            <Route path="/embaixadoras" component={Embaixadoras} />
+            <Route path="/embaixadoras" exact={true} component={Embaixadoras} />
+              <Route path="/embaixadoras/greice" exact={true} component={Greice} />
+              <Route path="/embaixadoras/anne" exact={true} component={Anne} />
+              <Route path="/embaixadoras/jani" exact={true} component={Jani} />
+              <Route path="/embaixadoras/karine" exact={true} component={Karine} />
+              <Route path="/embaixadoras/charlene" exact={true} component={Charlene} />
+              <Route path="/embaixadoras/monique" exact={true} component={Monica} />
             <Route path="/mentorias" component={Mentorias} />
             <Route path="/quem-somos" component={QuemSomos} />
             <Route path="/contato" component={Contato} />
