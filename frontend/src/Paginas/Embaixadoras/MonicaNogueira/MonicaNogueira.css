@@ -1,0 +1,17 @@
+.GreiceEmbaixadora .headerMenu {
+  background: #823DC3;
+}
+
+.landingEmbaixadora {
+  height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.textoEventosEmbaixadora {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,20 @@
+.Embaixadora .headerMenu {
+  background: #823DC3;
+}
+
+.KarineGraeff .landingEmbaixadora {
+  height: 100vh;
+}
+
+.landingEmbaixadora {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.textoEventosEmbaixadora {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  align-items: center;
+  justify-content: center;
+}
